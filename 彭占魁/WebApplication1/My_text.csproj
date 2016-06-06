@@ -56,12 +56,16 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\MyText_log.LDF">
+      <DependentUpon>MyText.mdf</DependentUpon>
+    </Content>
     <Content Include="GL_login.html" />
     <Content Include="js\Ajax.js" />
     <Content Include="html\废弃_html.html" />
     <Content Include="js\jquery1.js" />
     <Content Include="js\Particleground.js" />
     <Content Include="js\verificationNumbers.js" />
+    <Content Include="App_Data\MyText.mdf" />
     <Content Include="style.css" />
     <Content Include="style2.css" />
     <Content Include="web\land.aspx" />
