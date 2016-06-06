@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>    
+        <div style=" width: 280px; margin: auto; padding: 50; background-color:;">
+        <h1 align="center">用户登录</h1>       
+            <p>用户名：</p>
+            <input type="text" id="usr" name="use" value=""/>
+            <p>密码：</p>
+            <input type="password" id="pas" name="password" value=""/>
+            <br />
+            <br />
+            <button onclick="login()"type="submit" formmethod="get">登录</button>            
+            <button onclick="register()">注册</button>    
+            <font color="red" id="info"></font>
+       
+    </div>
+</body>
+<script type="text/javascript" src="../js/ajax.js"></script>
+<script type="text/javascript">
+   function login()
+    {
+       ajax("../ashx/login.ashx?use=" + usr.value + "&password=" + pas.value, function (resText){
+            if (resText == "ok")
+            {
+                alert("登陆成功");
+                location.href = 'my_info.aspx';
+            }
+            else if (resText == "error")
+                alert("用户或密码错误");
+            else
+            {
+                alert("AJAX服务器返回错误");
+            }
+
+        });
+
+  
+    }
+   function register()
+    {
+        location.href = 'register.html';
+    }
+</script> 
+</html>
+
+
+
