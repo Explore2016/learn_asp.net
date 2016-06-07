@@ -68,11 +68,11 @@
     <Content Include="App_Data\MyText.mdf" />
     <Content Include="style.css" />
     <Content Include="style2.css" />
-    <Content Include="web\land.aspx" />
+    <Content Include="html\land.aspx" />
     <Content Include="html\register.html" />
     <Content Include="html\废弃_html2.html" />
-    <Content Include="web\use_to_change_my_information.aspx" />
-    <Content Include="web\central frame.aspx" />
+    <Content Include="html\use_to_change_my_information.aspx" />
+    <Content Include="html\central frame.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -87,11 +87,11 @@
     <Compile Include="handler\废弃.ashx.cs">
       <DependentUpon>废弃.ashx</DependentUpon>
     </Compile>
-    <Compile Include="web\land.aspx.cs">
+    <Compile Include="html\land.aspx.cs">
       <DependentUpon>land.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="web\land.aspx.designer.cs">
+    <Compile Include="html\land.aspx.designer.cs">
       <DependentUpon>land.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,18 +103,18 @@
     <Compile Include="handler\use_to_change_my_information.ashx.cs">
       <DependentUpon>use_to_change_my_information.ashx</DependentUpon>
     </Compile>
-    <Compile Include="web\use_to_change_my_information.aspx.cs">
+    <Compile Include="html\use_to_change_my_information.aspx.cs">
       <DependentUpon>use_to_change_my_information.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="web\use_to_change_my_information.aspx.designer.cs">
+    <Compile Include="html\use_to_change_my_information.aspx.designer.cs">
       <DependentUpon>use_to_change_my_information.aspx</DependentUpon>
     </Compile>
-    <Compile Include="web\central frame.aspx.cs">
+    <Compile Include="html\central frame.aspx.cs">
       <DependentUpon>central frame.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="web\central frame.aspx.designer.cs">
+    <Compile Include="html\central frame.aspx.designer.cs">
       <DependentUpon>central frame.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
