@@ -59,8 +59,8 @@
   <ItemGroup>
     <Content Include="APP_Data\login.mdf" />
     <Content Include="APP_Data\login_log.ldf" />
-    <Content Include="web_forms\Admin.aspx" />
-    <Content Include="web_forms\Login_success.aspx" />
+    <Content Include="html\Admin.aspx" />
+    <Content Include="html\Login_success.aspx" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery1.js" />
     <Content Include="js\Particleground.js" />
@@ -76,18 +76,18 @@
     <Compile Include="handler\Login_ajax.ashx.cs">
       <DependentUpon>Login_ajax.ashx</DependentUpon>
     </Compile>
-    <Compile Include="web_forms\Admin.aspx.cs">
+    <Compile Include="html\Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="web_forms\Admin.aspx.designer.cs">
+    <Compile Include="html\Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="web_forms\Login_success.aspx.cs">
+    <Compile Include="html\Login_success.aspx.cs">
       <DependentUpon>Login_success.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="web_forms\Login_success.aspx.designer.cs">
+    <Compile Include="html\Login_success.aspx.designer.cs">
       <DependentUpon>Login_success.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
