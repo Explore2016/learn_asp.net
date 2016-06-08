@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0052)http://172.16.13.32/dkl/sign_in/html/all_detail.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <title></title>
+    <script src="../js/jquery.min.js"></script>
+</head>
+<body>
+    <div id="listBox">
+        
+        <div id="Container">
+            <table id="table_left" style="margin:25px;float:none;"><tbody><tr>
+                        <th class="t1">序号</th>
+                        <th class="t2">学号</th>
+                        <th class="t3">姓名</th>
+                        <th class="t3">开始</th>
+                        <th class="t3">结束</th>
+                        <th class="t4">周数</th>
+                        <th class="t4">星期</th>
+                        <th class="t5">时间</th></tr><tr>
+                        
+                        <td>60</td>
+                        <td>1500360231</td>
+                        <td>钟善豪</td>
+                        <td> 8:21</td>
+                        <td>11:55</td>
+                        <td>14</td>
+                        <td>Wednesday</td>
+                        <td>3:34</td></tr><tr>
+                        <td>61</td>
+                        <td>1500360231</td>
+                        <td>钟善豪</td>
+                        <td>20:42</td>
+                        <td>22:48</td>
+                        <td>14</td>
+                        <td>Tuesday</td>
+                        <td>2:06</td></tr><tr>
+                        <td>62</td>
+                        <td>1500360231</td>
+                        <td>钟善豪</td>
+                        <td>16:11</td>
+                        <td>18:45</td>
+                        <td>14</td>
+                        <td>Tuesday</td>
+                        <td>2:34</td></tr><tr>
+                        <td>63</td>
+                        <td>1500360231</td>
+                        <td>钟善豪</td>
+                        <td>11:04</td>
+                        <td>12:22</td>
+                        <td>14</td>
+                        <td>Monday</td>
+                        <td>1:18</td></tr><tr>
+                            <td style="background:none;"></td>
+                            <td style="background:none;"></td>
+                            <td style="background:none;"></td>
+                            <td style="background:none;"></td>
+                            <td style="background:none;"></td>
+                            <td style="background:none;"></td>
+                            <td>总共：</td>
+                            <td>9:32</td></tr></tbody></table>
+           <div style="clear:both;"></div>  
+        </div>
+    </div>
+    <script>
+        var week = 0;
+        function next(week)
+        {
+            $.ajax({
+                url: '../handler/info.ashx?info=All&week=' + week,
+                type: 'post',
+                success: function (re) {
+                    table_left.innerHTML = re;
+                }
+            })
+        }
+        next(week);
+    </script>
+    <br>
+    <br>
+    <br>
+
+
+</body></html>
