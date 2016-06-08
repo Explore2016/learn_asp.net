@@ -5,21 +5,29 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace login.html
 {
-    public partial class login : System.Web.UI.Page
+    public partial class login : System.Web.UI.Page,IRequiresSessionState
     {
         public DataTable table;
         public string admin_btn;
         protected void Page_Load(object sender, EventArgs e)
         {
-            HttpCookie id = Context.Request.Cookies["id"];
-            HttpCookie password = Context.Request.Cookies["password"];
-            long ID = long.Parse(id.Value);
-            long Password = long.Parse(password.Value);
+            //HttpCookie id = Context.Request.Cookies["id"];
+            //HttpCookie password = Context.Request.Cookies["password"];
+            //long ID = long.Parse(id.Value);
+            //long Password = long.Parse(password.Value);
+            if (Context.Session["id"] == null || Context.Session["password"]==null)
+            {
+                Context.Response.Redirect("login.html");
+                return;
+            }
+            long ID = long.Parse(Session["id"].ToString());
+            long Password = long.Parse(Session["password"].ToString());
             table = SqlHelper.ExecuteDataTable("select * from T_Students where ID=@ID and Password=@Password",
              new SqlParameter("@ID", ID),
              new SqlParameter("@Password", Password));

@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 
 namespace WebApplication.login
 {
     /// <summary>
     /// GL_login 的摘要说明
     /// </summary>
-    public class GL_login : IHttpHandler
+    public class GL_login : IHttpHandler,IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
@@ -34,8 +35,10 @@ namespace WebApplication.login
                 }
                 else if(count_2==1)
                 {
-                    context.Response.SetCookie(new HttpCookie("id",ID.ToString()));
-                    context.Response.SetCookie(new HttpCookie("password", Password.ToString()));
+                    //context.Response.SetCookie(new HttpCookie("id",ID.ToString()));
+                    //context.Response.SetCookie(new HttpCookie("password", Password.ToString()));
+                    context.Session["id"] = ID;
+                    context.Session["password"] = Password;
                     context.Response.Write("right");
                 }
                 else
