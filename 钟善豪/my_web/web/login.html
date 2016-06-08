@@ -1,29 +1,31 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>    
-        <div style=" width: 280px; margin: auto; padding: 50; background-color:;">
-        <h1 align="center">用户登录</h1>       
-            <p>用户名：</p>
-            <input type="text" id="usr" name="use" value=""/>
-            <p>密码：</p>
-            <input type="password" id="pas" name="password" value=""/>
-            <br />
-            <br />
-            <button onclick="login()"type="submit" formmethod="get">登录</button>            
-            <button onclick="register()">注册</button>    
-            <font color="red" id="info"></font>
-       
-    </div>
-</body>
-<script type="text/javascript" src="../js/ajax.js"></script>
+    <meta charset="utf-8" />
+    <title>后台登录</title>
+    <meta name="author" content="DeathGhost" />
+   <!-- <link rel="stylesheet" type="text/css" href="style2.css" />-->
+    <link href="../css/style2.css" type="text/css" rel="stylesheet">
+    <style>
+        body {
+            height: 100%;
+            background: #16a085;
+            overflow: hidden;
+        }
+
+        canvas {
+            z-index: -1;
+            position: absolute;
+        }
+    </style>
+    <script src="../js/jquery1.js"></script>
+    <script src="../js/verificationNumbers.js"></script>
+    <script src="../js/Particleground.js"></script>
+    <script type="text/javascript" src="../js/ajax.js"></script>
 <script type="text/javascript">
-   function login()
+    function login()
     {
-       ajax("../ashx/login.ashx?use=" + usr.value + "&password=" + pas.value, function (resText){
+        ajax("../ashx/login.ashx?use=" + usr.value + "&password=" + pas.value, function (resText) {
             if (resText == "ok")
             {
                 alert("登陆成功");
@@ -37,15 +39,53 @@
             }
 
         });
-
-  
     }
-   function register()
+    function register()
     {
         location.href = 'register.html';
     }
-</script> 
+
+        $(document).ready(function () {
+            //粒子背景特效
+            $('body').particleground({
+                dotColor: '#5cbdaa',
+                lineColor: '#5cbdaa'
+            });
+            //验证码
+            createCode();
+            //测试提交，对接程序删除即可
+            $(".submit_btn").click(function () {
+                //location.href = "index.html";
+            });
+        });
+    </script>
+</head>
+<body>
+    <dl class="admin_login">
+        <dt>
+            <strong>这是一个很漂亮的登陆页面</strong>
+            <em>Management System</em>
+        </dt>
+        <dd class="user_icon">
+            <input type="text" placeholder="账号" class="login_txtbx" id="usr" name="use" value="" />
+        </dd>
+        <dd class="pwd_icon">
+            <input type="password" placeholder="密码" class="login_txtbx" id="pas" name="password" value=""/>
+        </dd>
+        <dd class="val_icon">
+            <div class="checkcode">
+                <input type="text" id="J_codetext" placeholder="验证码" maxlength="4" class="login_txtbx">
+                <canvas class="J_codeimg" id="myCanvas" onclick="createCode()">对不起，您的浏览器不支持canvas，请下载最新版浏览器!</canvas>
+            </div>
+            <input type="button" value="验证码核验" class="ver_btn" onClick="validate();">
+        </dd>
+        <dd>
+            <input type="button"  onclick="login()"value="立即登陆" class="submit_btn" />
+            
+        </dd>
+        <dd>
+            <input type="button"  onclick="register()"value="注册" class="submit_btn" />
+        </dd>
+    </dl>
+</body>
 </html>
-
-
-

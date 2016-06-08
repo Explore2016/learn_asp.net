@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace my_web
 {
-    public partial class my_info : System.Web.UI.Page
+    public partial class my_info2 : System.Web.UI.Page
     {
         public string id;
         public string name;
@@ -17,10 +17,9 @@ namespace my_web
         public string age;
         public DataTable dt;
         public DataTable da;
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            HttpCookie cookie1 = Request.Cookies["id"];          
+            HttpCookie cookie1 = Request.Cookies["id"];
             id = cookie1.Value;
             dt = Sqlhelper1.ExecuteDataTable("select * from student where id=@id", new SqlParameter("@id", id));
             da = Sqlhelper1.ExecuteDataTable("select * from student ", new SqlParameter("@id", id));
@@ -30,7 +29,6 @@ namespace my_web
                 xingbie = dt.Rows[i]["sex"].ToString();
                 age = dt.Rows[i]["age"].ToString();
             }
-                  
         }
     }
 }
