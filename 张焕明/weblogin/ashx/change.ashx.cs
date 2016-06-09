@@ -5,20 +5,21 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 
 namespace weblogin.ashx
 {
     /// <summary>
     /// change 的摘要说明
     /// </summary>
-    public class change : IHttpHandler
+    public class change : IHttpHandler,IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/html";
-            HttpCookie cookie = context.Request.Cookies["user"];
-            string username = cookie.Value;
+            string username = (string)context.Session["user"];
+            //string username = cookie.Value;
             string password = context.Request["mima"];
             string studyid = context.Request["xuehao"];
             string iname = context.Request["people"];

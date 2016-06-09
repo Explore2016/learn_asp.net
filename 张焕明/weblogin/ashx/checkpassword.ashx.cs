@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 using weblogin;
 
 namespace weblogin
@@ -13,7 +14,7 @@ namespace weblogin
     /// <summary>
     /// checkmima 的摘要说明
     /// </summary>
-    public class checkmima : IHttpHandler
+    public class checkmima : IHttpHandler, IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
@@ -32,9 +33,9 @@ namespace weblogin
                     string Id = (string)row["Administrator"];
                     if (password == password2)
                     {
-                        context.Response.SetCookie(new HttpCookie("user", username));
-                        context.Response.SetCookie(new HttpCookie("password", password2));
-                        context.Response.SetCookie(new HttpCookie("Id",Id));
+                        context.Session["user"]=username;
+                        context.Session["password"] = password2;
+                        context.Session["Id"] = Id;
                         context.Response.Write("yes");
                        return;
                     }

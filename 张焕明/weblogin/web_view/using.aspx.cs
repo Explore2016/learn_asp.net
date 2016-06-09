@@ -6,13 +6,15 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebApplication2;
 
 namespace WebApplication2
 {
-    public partial class _using : System.Web.UI.Page
+    public partial class _using : System.Web.UI.Page, IRequiresSessionState
+
     {
         public DataTable tables;
         public string username;
@@ -25,12 +27,15 @@ namespace WebApplication2
         protected void Page_Load(object sender, EventArgs e)
         {
             Response.ContentType = "text/html";
-            HttpCookie cookie = Request.Cookies["user"];
-            HttpCookie login = Request.Cookies["password"];
-            HttpCookie id = Request.Cookies["Id"];
-            username = cookie.Value;
-            usertype = id.Value;
-            string password = login.Value;
+            username = Session["user"].ToString();
+            string password = (string)Session["password"];
+            usertype = (string)Session["Id"];
+            //HttpCookie cookie = Request.Cookies["user"];
+            //HttpCookie login = Request.Cookies["password"];
+            //HttpCookie id = Request.Cookies["Id"];
+            //username = cookie.Value;
+            //usertype = id.Value;
+            //string password = login.Value;
 
             string conStr = ConfigurationManager.ConnectionStrings["ipname"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(conStr))

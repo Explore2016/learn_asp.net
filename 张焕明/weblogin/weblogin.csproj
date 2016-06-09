@@ -66,6 +66,7 @@
     <Content Include="js\jquery.min.js" />
     <Content Include="css\style.css" />
     <Content Include="web_view\change.aspx" />
+    <Content Include="web_view\info.aspx" />
     <Content Include="web_view\login.html" />
     <Content Include="js\jquery1.js" />
     <Content Include="js\Particleground.js" />
@@ -98,6 +99,13 @@
     </Compile>
     <Compile Include="web_view\change.aspx.designer.cs">
       <DependentUpon>change.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_view\info.aspx.cs">
+      <DependentUpon>info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_view\info.aspx.designer.cs">
+      <DependentUpon>info.aspx</DependentUpon>
     </Compile>
     <Compile Include="web_view\using.aspx.cs">
       <DependentUpon>using.aspx</DependentUpon>
