@@ -1,0 +1,99 @@
+------------------
+System Information
+------------------
+Serial Number:                9S716J212265ZF9000700
+Product Name:                 GE62 2QD
+OS:                           Microsoft Windows 7 旗舰版  64-bit
+Windows Product Key:          PMJBM
+HDI Build:                    non-OEM
+BIOS Version:                 E16J2IMS.114
+BIOS Release Date:            2015/09/23
+EC Version:                   16J2EMS1 Ver5.08, 07/13/2015
+CPU:                          Intel(R) Core(TM) i7-5700HQ CPU @ 2.70GHz
+Memory:                       8192 MB @ 800 MHz
+                               - 8192 MB, DDR3-1600, Kingston MSI16D3LS1MNG/8G  
+Graphics:                     NVIDIA GeForce GTX 960M, 2048 MB
+Graphics:                     Intel(R) HD Graphics 5600, 1024 MB
+VBIOS Version:                82.07.7c.00.28
+Network:                      Bluetooth 设备(个人区域网)
+Network:                      Microsoft Virtual WiFi Miniport Adapter
+Network:                      Intel(R) Dual Band Wireless-AC 3160
+Network:                      Killer e2200 PCI-E Gigabit Ethernet Controller (NDIS 6.20)
+
+---------------------
+Programs and Features
+---------------------
+2345好压 , v5.5
+SteelSeries Engine 3.3.3.383 , 3.3.3.383
+Synaptics Pointing Device Driver , 18.1.30.4
+Microsoft Visual C++ 2010  x64 Redistributable - 10.0.40219 , 10.0.40219
+Qualcomm Atheros Network Manager , 1.1.41.1283
+Intel(R) PROSet/Wireless Software for Bluetooth(R) Technology(patch version 17.0.1405.3) , 17.0.1312.0414
+Microsoft Visual C++ 2012 x64 Additional Runtime - 11.0.61030 , 11.0.61030
+Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.6161 , 9.0.30729.6161
+Qualcomm Atheros Bandwidth Control Filter Driver , 1.1.41.1283
+Microsoft .NET Framework 4 Extended , 4.0.30319
+Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.21005 , 12.0.21005
+Intel(R) Rapid Storage Technology , 12.8.2.1000
+Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.21005 , 12.0.21005
+Microsoft Visual C++ 2005 Redistributable (x64) , 8.0.61000
+NVIDIA 控制面板 353.62 , 353.62
+NVIDIA 图形驱动程序 353.62 , 353.62
+NVIDIA GeForce Experience 2.9.1.22 , 2.9.1.22
+NVIDIA Optimus Update 2.9.1.22 , 2.9.1.22
+NVIDIA PhysX 系统软件 9.15.0428 , 9.15.0428
+NVIDIA 更新 2.9.1.22 , 2.9.1.22
+NVIDIA LED Visualizer 1.0 , 1.0
+SHIELD Streaming , 4.1.0260
+NVIDIA GeForce Experience Service , 2.9.1.22
+NVIDIA Install Application , 2.1002.197.1691
+NVIDIA Network Service , 2.4
+NVIDIA ShadowPlay 2.9.1.22 , 2.9.1.22
+SHIELD Wireless Controller Driver , 2.9.1.22
+NVIDIA Update Core , 2.9.1.22
+NVIDIA Virtual Audio 1.2.34 , 1.2.34
+Intel® Trusted Connect Service Client , 1.31.8.1
+Microsoft Visual C++ 2012 x64 Minimum Runtime - 11.0.61030 , 11.0.61030
+Microsoft .NET Framework 4 Client Profile , 4.0.30319
+SCM , 13.014.09014
+Qualcomm Atheros Killer E220x Drivers , 1.1.41.1283
+Adobe Flash Player 20 ActiveX , 20.0.0.306
+Help Desk , 1.0.1508.1802
+Dragon Gaming Center , 1.0.1501.2801
+小鲁温度监控 , 1.0.0.1005
+猎豹安全浏览器 , 5.3.108.10912
+Rockstar Games Social Club , 1.1.5.8
+搜狗拼音输入法 7.9正式版 , 7.9.0.7428
+腾讯QQ , 8.1.17216.0
+Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.21005 , 12.0.21005
+Google Toolbar for Internet Explorer , 1.0.0
+Intel(R) USB 3.0 eXtensible Host Controller Driver , 2.5.3.34
+Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.61030 , 11.0.61030.0
+Camera Recorder , 1.0.909.0801
+Realtek Card Reader , 6.3.9600.39062
+Intel(R) Management Engine Components , 9.5.15.1730
+英特尔® PROSet/无线软件 , 17.16.0
+Qualcomm Atheros Performance Suite , 1.1.41.1283
+Microsoft Visual C++ 2005 Redistributable , 8.0.61001
+Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.21005 , 12.0.21005.1
+Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161 , 9.0.30729.6161
+Google Update Helper , 1.3.24.7
+Microsoft Visual C++ 2012 x86 Additional Runtime - 11.0.61030 , 11.0.61030
+Microsoft Visual C++ 2012 x86 Minimum Runtime - 11.0.61030 , 11.0.61030
+Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.61030 , 11.0.61030.0
+Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.21005 , 12.0.21005.1
+Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219 , 10.0.40219
+Intel(R) Processor Graphics , 10.18.14.4222
+Realtek High Definition Audio Driver , 6.0.1.7378
+Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.21005 , 12.0.21005
+
+-------------
+OS Activation
+-------------
+
+名称: Windows(R) 7, Ultimate edition
+描述: Windows Operating System - Windows(R) 7, OEM_SLP channel
+部分产品密钥: PMJBM
+许可证状态: 已授权
+
+

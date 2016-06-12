@@ -60,6 +60,7 @@
     <Content Include="APP_Data\login.mdf" />
     <Content Include="APP_Data\login_log.ldf" />
     <Content Include="html\Admin.aspx" />
+    <Content Include="html\Files.aspx" />
     <Content Include="html\Login_success.aspx" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery1.js" />
@@ -69,12 +70,17 @@
     <Content Include="html\Login.html" />
     <Content Include="css\style.css" />
     <Content Include="js\verificationNumbers.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="code\SqlHelper.cs" />
     <Compile Include="handler\Login_ajax.ashx.cs">
       <DependentUpon>Login_ajax.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\upload_files.ashx.cs">
+      <DependentUpon>upload_files.ashx</DependentUpon>
     </Compile>
     <Compile Include="html\Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
@@ -82,6 +88,13 @@
     </Compile>
     <Compile Include="html\Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\Files.aspx.cs">
+      <DependentUpon>Files.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\Files.aspx.designer.cs">
+      <DependentUpon>Files.aspx</DependentUpon>
     </Compile>
     <Compile Include="html\Login_success.aspx.cs">
       <DependentUpon>Login_success.aspx</DependentUpon>
@@ -94,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="handler\Login_ajax.ashx" />
+    <Content Include="handler\upload_files.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -101,7 +115,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="files\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

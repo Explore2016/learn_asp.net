@@ -31,19 +31,21 @@
                         <th class="t3">性别</th>
                         <th class="t3">专业</th>
                     </tr>
-                 <% for (int i = 0; i < table.Rows.Count; i++)
-               { %>
-            <tr>
-                <td><%=i+1 %></td>
-                <td id="id_<%=i+1 %>"><%=table.Rows[i]["ID"].ToString() %></td>
-                <td><%=table.Rows[i]["Name"].ToString() %></td>
-                <td><%=table.Rows[i]["Gender"].ToString() %></td>
-                <td><%=table.Rows[i]["Major"].ToString() %></td>
-                <% long ID = long.Parse(table.Rows[i]["ID"].ToString()); %>
-                <th><input type="button" value="删除" onclick="Confirm_del(<%=ID%>)" /></th>
-            </tr>
-            <%} %>  
-
+                    <% for (int i = 0; i < table.Rows.Count; i++)
+                       { %>
+                    <tr>
+                        <td><%=i+1 %></td>
+                        <td id="id_<%=i+1 %>"><%=table.Rows[i]["ID"].ToString() %></td>
+                        <td><%=table.Rows[i]["Name"].ToString() %></td>
+                        <td><%=table.Rows[i]["Gender"].ToString() %></td>
+                        <td><%=table.Rows[i]["Major"].ToString() %></td>
+                        <% long ID = long.Parse(table.Rows[i]["ID"].ToString()); %>
+                        <th>
+                            <input type="button" value="删除" onclick="Confirm_del(<%=ID%>)" />
+                        </th>
+                    </tr>
+                    <%} %>
+                    <th style="text-align:center"><a href="files.aspx"><input type="button" value="上传文件" /></a></th>
                 </tbody>
             </table>
             <div style="clear:both;"></div>
