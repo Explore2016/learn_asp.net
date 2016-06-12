@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0052)http://172.16.13.32/dkl/sign_in/html/all_detail.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <link href="./all_detail_files/style.css" type="text/css" rel="stylesheet">
+    <title></title>
+    <script src="./all_detail_files/jquery.min.js"></script>
+</head>
+<body>
+    <div id="listBox">
+        
+        <div id="Container">
+            <table id="table_left" style="margin:25px;float:none;"><tbody><tr>
+                        <th class="t1">序号</th>
+                <th><input type="text" id="textname"name="name" value="<%=name%>"/></th>
+                        <th class="t2">用户名</th>
+                        <th class="t3">密码</th>
+                        <th class="t3">学号</th>
+                        <th class="t3">姓名</th>
+                        <th class="t5">身份证</th>
+
+                        </tr><tr>
+                       
+                            </tr></tbody></table>
+           <div style="clear:both;"></div>  
+        </div>
+    </div>
+    <script>
+        var week = 0;
+        function next(week) {
+            $.ajax({
+                url: '../handler/info.ashx?info=All&week=' + week,
+                type: 'post',
+                success: function (re) {
+                    table_left.innerHTML = re;
+                }
+            })
+        }
+        next(week);
+    </script>
+    <br>
+    <br>
+    <br>
+
+
+</body></html>

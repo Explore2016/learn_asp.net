@@ -7,19 +7,18 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{57BCC875-993B-4C6F-94BA-8CF0EFA4E333}</ProjectGuid>
+    <ProjectGuid>{82F8DD19-1CB6-4367-9BBC-671CF285D30A}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebApplication1</RootNamespace>
-    <AssemblyName>WebApplication1</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <RootNamespace>weblogin</RootNamespace>
+    <AssemblyName>weblogin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,98 +39,87 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\MyText_log.LDF">
-      <DependentUpon>MyText.mdf</DependentUpon>
+    <Content Include="App_Data\My_login.mdf" />
+    <Content Include="App_Data\My_login_log.ldf">
+      <DependentUpon>My_login.mdf</DependentUpon>
     </Content>
-    <Content Include="GL_login.html" />
-    <Content Include="js\Ajax.js" />
-    <Content Include="html\废弃_html.html" />
+    <Content Include="js\ajax.js" />
+    <Content Include="web_view\all_detail.html" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="css\style.css" />
+    <Content Include="web_view\change.aspx" />
+    <Content Include="web_view\info.aspx" />
+    <Content Include="web_view\login.html" />
     <Content Include="js\jquery1.js" />
     <Content Include="js\Particleground.js" />
+    <Content Include="css\style2.css" />
     <Content Include="js\verificationNumbers.js" />
-    <Content Include="App_Data\MyText.mdf" />
-    <Content Include="style.css" />
-    <Content Include="style2.css" />
-    <Content Include="html\land.aspx" />
-    <Content Include="html\register.html" />
-    <Content Include="html\废弃_html2.html" />
-    <Content Include="html\use_to_change_my_information.aspx" />
-    <Content Include="html\central frame.aspx" />
-    <Content Include="html\Up_load.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="web_view\using.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="handler\Ajax_text.ashx.cs">
-      <DependentUpon>Ajax_text.ashx</DependentUpon>
+    <Compile Include="ashx\change.ashx.cs">
+      <DependentUpon>change.ashx</DependentUpon>
     </Compile>
-    <Compile Include="handler\delete.ashx.cs">
+    <Compile Include="ashx\delete.ashx.cs">
       <DependentUpon>delete.ashx</DependentUpon>
     </Compile>
-    <Compile Include="handler\废弃.ashx.cs">
-      <DependentUpon>废弃.ashx</DependentUpon>
+    <Compile Include="ashx\upload_file.ashx.cs">
+      <DependentUpon>upload_file.ashx</DependentUpon>
     </Compile>
-    <Compile Include="html\land.aspx.cs">
-      <DependentUpon>land.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="html\land.aspx.designer.cs">
-      <DependentUpon>land.aspx</DependentUpon>
+    <Compile Include="person.cs" />
+    <Compile Include="ashx\checkpassword.ashx.cs">
+      <DependentUpon>checkpassword.ashx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="handler\register.ashx.cs">
-      <DependentUpon>register.ashx</DependentUpon>
-    </Compile>
     <Compile Include="SqlHelper.cs" />
-    <Compile Include="html\Up_load.aspx.cs">
-      <DependentUpon>Up_load.aspx</DependentUpon>
+    <Compile Include="web_view\change.aspx.cs">
+      <DependentUpon>change.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="html\Up_load.aspx.designer.cs">
-      <DependentUpon>Up_load.aspx</DependentUpon>
+    <Compile Include="web_view\change.aspx.designer.cs">
+      <DependentUpon>change.aspx</DependentUpon>
     </Compile>
-    <Compile Include="use_change.cs" />
-    <Compile Include="handler\use_to_change_my_information.ashx.cs">
-      <DependentUpon>use_to_change_my_information.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="html\use_to_change_my_information.aspx.cs">
-      <DependentUpon>use_to_change_my_information.aspx</DependentUpon>
+    <Compile Include="web_view\info.aspx.cs">
+      <DependentUpon>info.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="html\use_to_change_my_information.aspx.designer.cs">
-      <DependentUpon>use_to_change_my_information.aspx</DependentUpon>
+    <Compile Include="web_view\info.aspx.designer.cs">
+      <DependentUpon>info.aspx</DependentUpon>
     </Compile>
-    <Compile Include="html\central frame.aspx.cs">
-      <DependentUpon>central frame.aspx</DependentUpon>
+    <Compile Include="web_view\using.aspx.cs">
+      <DependentUpon>using.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="html\central frame.aspx.designer.cs">
-      <DependentUpon>central frame.aspx</DependentUpon>
+    <Compile Include="web_view\using.aspx.designer.cs">
+      <DependentUpon>using.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="handler\废弃.ashx" />
-    <Content Include="handler\delete.ashx" />
-    <Content Include="handler\use_to_change_my_information.ashx" />
-    <Content Include="handler\register.ashx" />
-    <Content Include="handler\Ajax_text.ashx" />
+    <Content Include="ashx\checkpassword.ashx" />
+    <Content Include="ashx\delete.ashx" />
+    <Content Include="ashx\change.ashx" />
+    <Content Include="ashx\upload_file.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -155,9 +143,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>19409</DevelopmentServerPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:48946/</IISUrl>
+          <IISUrl>http://localhost:14368/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

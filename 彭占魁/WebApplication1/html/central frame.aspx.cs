@@ -4,12 +4,13 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace WebApplication1
 {
-    public partial class view_string : System.Web.UI.Page
+    public partial class view_string : System.Web.UI.Page, IRequiresSessionState
     {
         public string str;
         public DataTable stdent_info;
@@ -18,8 +19,8 @@ namespace WebApplication1
         public int  VIP_ID;
         protected void Page_Load(object sender, EventArgs e)
         {
-            HttpCookie login=Request.Cookies["user"];
-            str = login.Value;
+            //HttpCookie login=Request.Cookies["user"];
+            str = (string)Session["user"];
             stdent_info = SqlHelper.ExecuteDataTable("select * from T_student where Cookie=@ID",
                          new SqlParameter[] { new SqlParameter("@ID",str)});
             VIP_ID = Convert.ToInt32(stdent_info.Rows[0]["ID"]);

@@ -4,13 +4,14 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 
 namespace my_web
 {
     /// <summary>
     /// login 的摘要说明
     /// </summary>
-    public class login : IHttpHandler
+    public class login : IHttpHandler,IRequiresSessionState
     {
         public void  ProcessRequest(HttpContext context)
         {
@@ -28,7 +29,8 @@ namespace my_web
                     string name = (string)row["name"];
                     string sex = row["sex"].ToString();
                     int age = (int)row["age"];                
-                    context.Response.SetCookie(new HttpCookie("id", id.ToString()));
+                    //context.Response.SetCookie(new HttpCookie("id", id.ToString()));
+                    context.Session["id"] = id;
                 }
             }
             else

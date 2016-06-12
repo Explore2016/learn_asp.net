@@ -4,16 +4,16 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
-//using WebApplication1;
 using AJAX;
 using WebApplication1;
+using System.Web.SessionState;
 
 namespace AJAX
 {
     /// <summary>
     /// Ajax_text 的摘要说明
     /// </summary>
-    public class Ajax_text : IHttpHandler
+    public class Ajax_text : IHttpHandler,IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
@@ -59,7 +59,8 @@ namespace AJAX
                     int classID = (int)row["class ID"];
                     string college = (string)row["college"];
                     string cookie = (string)row["cookie"];
-                    context.Response.SetCookie(new HttpCookie("user", cookie));
+                    //context.Response.SetCookie(new HttpCookie("user", cookie));
+                    context.Session["user"] = cookie;
                     context.Response.Write("欢迎,学院:" +college+ "，专业：" + major + ",班级：" + classID + ",姓名：" + name+"同学");
                 }
             }
