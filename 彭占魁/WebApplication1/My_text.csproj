@@ -73,6 +73,7 @@
     <Content Include="html\废弃_html2.html" />
     <Content Include="html\use_to_change_my_information.aspx" />
     <Content Include="html\central frame.aspx" />
+    <Content Include="html\Up_load.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -99,6 +100,13 @@
       <DependentUpon>register.ashx</DependentUpon>
     </Compile>
     <Compile Include="SqlHelper.cs" />
+    <Compile Include="html\Up_load.aspx.cs">
+      <DependentUpon>Up_load.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\Up_load.aspx.designer.cs">
+      <DependentUpon>Up_load.aspx</DependentUpon>
+    </Compile>
     <Compile Include="use_change.cs" />
     <Compile Include="handler\use_to_change_my_information.ashx.cs">
       <DependentUpon>use_to_change_my_information.ashx</DependentUpon>
@@ -131,7 +139,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="upload_files\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
