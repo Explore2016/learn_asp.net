@@ -12,8 +12,8 @@
     <form id="form1" runat="server">
        <div id="listBox">
         <div id="inputBox">
-           <%-- <input type="button" name="btnLeft" value="上一周" onclick="next(--week)">
-            <input type="button" name="btnRight" value="下一周" onclick="next(++week)">--%>
+            <a href="login.html"><input type="button" name="btnLeft" value="返回登录" onclick="next(--week)"></a>
+             <a href="file.aspx"><input type="button" name="btnRight" value="上传文件" onclick="next(++week)"></a>
         </div>
         <div id="Container">
             <table id="table_left" style="margin:25px;float:none;">
@@ -40,10 +40,9 @@
                 <td><%=da.Rows[j]["name"].ToString() %></td>
                 <td><%=da.Rows[j]["sex"].ToString() %></td>
                 <td><%=da.Rows[j]["age"].ToString() %></td>                           
-                <th><a href="../ashx/delete.ashx?id=<%=da.Rows[j]["id"] %>"> <input type="button" name="btnLeft" value="删除" onclick="">
-                <th><a href="change.aspx?id=<%=da.Rows[j]["id"] %>"> <input type="button" name="btnLeft" value="编辑" onclick="">               
+                <th><a href="../ashx/delete.ashx?id=<%=da.Rows[j]["id"] %>"> <input type="button" name="btnLeft" value="删除" onclick=""></a>
+                <th><a href="change.aspx?id=<%=da.Rows[j]["id"] %>"> <input type="button" name="btnLeft" value="编辑" onclick=""></a>               
             </tr> <%} %>
-                </tr>
             </tbody></table>
            <div style="clear:both;"></div>  
         </div>

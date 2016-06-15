@@ -61,6 +61,7 @@
     <Content Include="APP_Data\mytest_log.ldf" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery1.js" />
+    <Content Include="web\file.aspx" />
     <Content Include="web\my_info.aspx" />
     <Content Include="js\Particleground.js" />
     <Content Include="css\style.css" />
@@ -77,6 +78,19 @@
   <ItemGroup>
     <Compile Include="ashx\change.ashx.cs">
       <DependentUpon>change.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\login.ashx.cs">
+      <DependentUpon>login.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\upload_file.ashx.cs">
+      <DependentUpon>upload_file.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="web\file.aspx.cs">
+      <DependentUpon>file.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\file.aspx.designer.cs">
+      <DependentUpon>file.aspx</DependentUpon>
     </Compile>
     <Compile Include="web\my_info.aspx.cs">
       <DependentUpon>my_info.aspx</DependentUpon>
@@ -95,9 +109,6 @@
     <Compile Include="ashx\delete.ashx.cs">
       <DependentUpon>delete.ashx</DependentUpon>
     </Compile>
-    <Compile Include="ashx\login.ashx.cs">
-      <DependentUpon>login.ashx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="cs\Sqlhelper1.cs" />
     <Compile Include="ashx\register.ashx.cs">
@@ -105,9 +116,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ashx\login.ashx" />
     <Content Include="ashx\delete.ashx" />
     <Content Include="ashx\change.ashx" />
+    <Content Include="ashx\upload_file.ashx" />
+    <Content Include="ashx\login.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -28,7 +28,7 @@ namespace my_web
             else
             {
                 Sqlhelper1.ExecuteScalar("insert into student (id,keys,name,sex,age)values (@id,@keys,@name,@sex,@age)", new SqlParameter("@id", id), new SqlParameter("@keys", key_1), new SqlParameter("@name", name), new SqlParameter("@sex", sex), new SqlParameter("@age", age));
-                context.Response.Write("<script>alert('注册成功 ');location.href = '../web/login.html';</script>");
+                context.Response.Write("注册成功！");
             }
 
         }
