@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace login.web_forms
 {
-    public partial class admin : System.Web.UI.Page,IRequiresSessionState
+    public partial class admin : System.Web.UI.Page
     {
         public DataTable table;
         protected void Page_Load(object sender, EventArgs e)

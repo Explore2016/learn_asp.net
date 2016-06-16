@@ -12,6 +12,15 @@
             window.location.href = "Admin.aspx";
         }
     </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input#Msg_btn").click(function () {
+                window.location.href = "../html/MessageBoard.aspx";
+            });
+        });
+</script>
     <%--<script src="../js/ajax.js"></script>
     <script type="text/javascript">
         function check() {
@@ -59,12 +68,11 @@
         </div>
         </center>
         <div id="inputBox">
-            <input type="button" name="btnLeft" value="返回登录" onclick="window.location.href = '../html/Login.html';"/><br />
+            <input type="button" name="btnLeft" value="返回登录" onclick="window.location.href = '../html/Login.html';"/>
+            <input type="button" name="btnLeft" id="Msg_btn" value="留言版" <%--onclick="window.location.href = '../html/MessageBoard.aspx'"--%>/><br />
             <a href="Files.aspx"><input type="button" name="btnLeft" value="下载文件" /></a>
             <%=admin_btn %>
            <%-- <input type="button" name="btnLeft" value="启用管理员身份" onclick="check()"/>--%>
-           <%-- <input type="button" name="btnRight" value="修改资料" onclick="window.location.href = 'modifier.aspx';"/><br />
-           <center><input type="button" name="btnRight" value="注销个人帐号" onclick="window.location.href = 'del_myself.aspx';"/></center><br />--%>
         </div>
     </div>
 </body>
