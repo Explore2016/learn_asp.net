@@ -12,7 +12,7 @@ namespace WebApplication1
 {
     public partial class view_string : System.Web.UI.Page, IRequiresSessionState
     {
-        public string str;
+        public int id;
         public DataTable stdent_info;
         public DataTable all_info;
         public bool VIP;
@@ -20,9 +20,10 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
             //HttpCookie login=Request.Cookies["user"];
-            str = (string)Session["user"];
-            stdent_info = SqlHelper.ExecuteDataTable("select * from T_student where Cookie=@ID",
-                         new SqlParameter[] { new SqlParameter("@ID",str)});
+            id =Convert.ToInt32(Session["ID"]);
+            //str = (string)Session["user"];
+            stdent_info = SqlHelper.ExecuteDataTable("select * from T_student where ID=@ID",
+                         new SqlParameter[] { new SqlParameter("@ID",id)});
             VIP_ID = Convert.ToInt32(stdent_info.Rows[0]["ID"]);
             if ((bool)stdent_info.Rows[0]["VIP"])
                 VIP = true;

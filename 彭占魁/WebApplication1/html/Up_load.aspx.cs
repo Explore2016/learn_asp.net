@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -30,8 +31,8 @@ namespace WebApplication1
                 Response.Write(ex.Message);
                 return;
             }
-
-            Response.Write("上传成功");
+            use_change.Executechange("insert into F_address(Address) values(@Address)", new SqlParameter("@Address", filepath));
+            Response.Write("上传成功");       
         }
     }
 }

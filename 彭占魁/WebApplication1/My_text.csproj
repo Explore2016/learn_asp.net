@@ -59,6 +59,8 @@
     <Content Include="App_Data\MyText_log.LDF">
       <DependentUpon>MyText.mdf</DependentUpon>
     </Content>
+    <Content Include="html\file_up_load.html" />
+    <Content Include="html\Files.aspx" />
     <Content Include="GL_login.html" />
     <Content Include="js\Ajax.js" />
     <Content Include="html\废弃_html.html" />
@@ -79,6 +81,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="html\Files.aspx.cs">
+      <DependentUpon>Files.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\Files.aspx.designer.cs">
+      <DependentUpon>Files.aspx</DependentUpon>
+    </Compile>
     <Compile Include="handler\Ajax_text.ashx.cs">
       <DependentUpon>Ajax_text.ashx</DependentUpon>
     </Compile>
@@ -107,6 +116,9 @@
     <Compile Include="html\Up_load.aspx.designer.cs">
       <DependentUpon>Up_load.aspx</DependentUpon>
     </Compile>
+    <Compile Include="handler\file_up_load.ashx.cs">
+      <DependentUpon>file_up_load.ashx</DependentUpon>
+    </Compile>
     <Compile Include="use_change.cs" />
     <Compile Include="handler\use_to_change_my_information.ashx.cs">
       <DependentUpon>use_to_change_my_information.ashx</DependentUpon>
@@ -132,6 +144,7 @@
     <Content Include="handler\use_to_change_my_information.ashx" />
     <Content Include="handler\register.ashx" />
     <Content Include="handler\Ajax_text.ashx" />
+    <Content Include="handler\file_up_load.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
