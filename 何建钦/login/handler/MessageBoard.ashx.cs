@@ -16,6 +16,11 @@ namespace login.handler
 
         public void ProcessRequest(HttpContext context)
         {
+            if (context.Request["Msg"] == null)
+            {
+                context.Response.Redirect("../html/MessageBoard.aspx");
+                return;
+            }
             context.Response.ContentType = "text/html";
             long ID = long.Parse(context.Session["id"].ToString());
             long Password = long.Parse(context.Session["password"].ToString());
@@ -23,7 +28,7 @@ namespace login.handler
              new SqlParameter("@ID", ID),
              new SqlParameter("@Password", Password)).ToString();
             string Msg = context.Request["Msg"];
-            int row = SqlHelpers.SqlHelper.ExecuteNonQuery("Insert into T_MessageBoard(Name,MessageContents,Supports,DataTime) values(@Name,@MessageContents,0,0)",
+            int row = SqlHelpers.SqlHelper.ExecuteNonQuery("Insert into T_MessageBoard(Name,MessageContents,Supports,DataTime) values(@Name,@MessageContents,0,GetDate())",
                 new SqlParameter("@Name",Name),
                 new SqlParameter("@MessageContents", Msg)
                  );
