@@ -12,14 +12,19 @@ namespace WebApplication1
 {
     public partial class land : System.Web.UI.Page, IRequiresSessionState
     {
-        public string string_info;
+        public int string_info;
         public DataTable student_info;
+        public bool VIP;
         protected void Page_Load(object sender, EventArgs e)
         {
             //HttpCookie login = Request.Cookies["user"];
-            string_info = (string)Session["user"];
-            student_info = SqlHelper.ExecuteDataTable("select * from T_student where Cookie=@ID",
+            string_info = Convert.ToInt32(Session["ID"]);
+            student_info = SqlHelper.ExecuteDataTable("select * from T_student where ID=@ID",
                          new SqlParameter[] { new SqlParameter("@ID",string_info) });
+            if ((bool)student_info.Rows[0]["VIP"])
+                VIP = true;
+            else
+                VIP = false;
         }
     }
 }

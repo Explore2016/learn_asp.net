@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Up_load.aspx.cs" Inherits="WebApplication1.Up_load" %>
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -37,26 +35,34 @@
                 location.href = "index.html";
             });
         });
+        function up_file(){
+            Ajax("../handler/file_up_load.ashx?upload=" + upload.files, function (resText) {
+                alert(resText);             
+            }
+                )//ajax封装函数
+        }
     </script>
 </head>
 <body>
-   <%-- <form enctype="multipart/form-data" method="post" dir="ltr" lang="zh-cn" action="Up_load.aspx">
-        <input type="file" name="upload" />
+    <form enctype="multipart/form-data" method="post" dir="ltr" lang="zh-cn" action="../handler/file_up_load.ashx">
+            <input type="file" name="upload" />
+        <input type="text" name="name" />
         <input type="submit" />
-    </form>--%>
-     <dl class="admin_login">
+         </form>
+  <!--   <dl class="admin_login">
         <dt>
             <strong>欢迎，这是管理员才能使用的文件上传</strong>
             <em>Management System</em>
         </dt>
         <dd class="user_icon">
-            <input type="file" name="upload" />
+            <input type="file" id="upload" />
         </dd>
          <dd>
-            <input type="button" value="上传文件" class="submit_btn2" onclick="button_file()"/>
+            <input type="button" value="上传文件" class="submit_btn2" onclick="up_file()"/>
         </dd>
         <dd>
-        </dd>
+        </dd>-->
     </dl>
 </body>
 </html>
+

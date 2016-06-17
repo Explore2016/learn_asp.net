@@ -90,23 +90,23 @@
         <dd>
             <input type="button" value="立即登陆" class="submit_btn2" onclick="on()"/>
         </dd>
+          <dd>
+            <input type="button" value="注册" class="submit_btn2" onclick="button_register()"/>
+        </dd>
+        <dd>
+            <input type="button" value="下载文件" class="submit_btn2" onclick="button_file()"/>
+        </dd>
         <dd>
         </dd>
     </dl>
    <!-- <input type="button" value="立即登陆" onclick="on()"/>-->
 </body>
-    <button onclick="button_xiugai()"style="background-color: aqua; color: violet">注册</button>
-    <style>
-    button
-	{
-		width: 50px;
-		height: 50px;
-		font-size: 10px;
-	}
-     </style>
      <script type="text/javascript">
-         function button_xiugai() {
+         function button_register() {
              location.href = 'html/register.html';
+         }
+         function button_file() {
+             location.href = 'html/Files.aspx';
          }
     </script>
 </html>
