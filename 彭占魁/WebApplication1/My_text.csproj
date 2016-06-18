@@ -59,6 +59,227 @@
     <Content Include="App_Data\MyText_log.LDF">
       <DependentUpon>MyText.mdf</DependentUpon>
     </Content>
+    <Content Include="js\ckeditor\adapters\jquery.js" />
+    <Content Include="js\ckeditor\ckeditor.js" />
+    <Content Include="js\ckeditor\ckeditor_basic.js" />
+    <Content Include="js\ckeditor\ckeditor_basic_source.js" />
+    <Content Include="js\ckeditor\ckeditor_source.js" />
+    <Content Include="js\ckeditor\config.js" />
+    <Content Include="js\ckeditor\contents.css" />
+    <Content Include="js\ckeditor\images\spacer.gif" />
+    <Content Include="js\ckeditor\lang\af.js" />
+    <Content Include="js\ckeditor\lang\ar.js" />
+    <Content Include="js\ckeditor\lang\bg.js" />
+    <Content Include="js\ckeditor\lang\bn.js" />
+    <Content Include="js\ckeditor\lang\bs.js" />
+    <Content Include="js\ckeditor\lang\ca.js" />
+    <Content Include="js\ckeditor\lang\cs.js" />
+    <Content Include="js\ckeditor\lang\cy.js" />
+    <Content Include="js\ckeditor\lang\da.js" />
+    <Content Include="js\ckeditor\lang\de.js" />
+    <Content Include="js\ckeditor\lang\el.js" />
+    <Content Include="js\ckeditor\lang\en-au.js" />
+    <Content Include="js\ckeditor\lang\en-ca.js" />
+    <Content Include="js\ckeditor\lang\en-gb.js" />
+    <Content Include="js\ckeditor\lang\en.js" />
+    <Content Include="js\ckeditor\lang\eo.js" />
+    <Content Include="js\ckeditor\lang\es.js" />
+    <Content Include="js\ckeditor\lang\et.js" />
+    <Content Include="js\ckeditor\lang\eu.js" />
+    <Content Include="js\ckeditor\lang\fa.js" />
+    <Content Include="js\ckeditor\lang\fi.js" />
+    <Content Include="js\ckeditor\lang\fo.js" />
+    <Content Include="js\ckeditor\lang\fr-ca.js" />
+    <Content Include="js\ckeditor\lang\fr.js" />
+    <Content Include="js\ckeditor\lang\gl.js" />
+    <Content Include="js\ckeditor\lang\gu.js" />
+    <Content Include="js\ckeditor\lang\he.js" />
+    <Content Include="js\ckeditor\lang\hi.js" />
+    <Content Include="js\ckeditor\lang\hr.js" />
+    <Content Include="js\ckeditor\lang\hu.js" />
+    <Content Include="js\ckeditor\lang\is.js" />
+    <Content Include="js\ckeditor\lang\it.js" />
+    <Content Include="js\ckeditor\lang\ja.js" />
+    <Content Include="js\ckeditor\lang\ka.js" />
+    <Content Include="js\ckeditor\lang\km.js" />
+    <Content Include="js\ckeditor\lang\ko.js" />
+    <Content Include="js\ckeditor\lang\lt.js" />
+    <Content Include="js\ckeditor\lang\lv.js" />
+    <Content Include="js\ckeditor\lang\mn.js" />
+    <Content Include="js\ckeditor\lang\ms.js" />
+    <Content Include="js\ckeditor\lang\nb.js" />
+    <Content Include="js\ckeditor\lang\nl.js" />
+    <Content Include="js\ckeditor\lang\no.js" />
+    <Content Include="js\ckeditor\lang\pl.js" />
+    <Content Include="js\ckeditor\lang\pt-br.js" />
+    <Content Include="js\ckeditor\lang\pt.js" />
+    <Content Include="js\ckeditor\lang\ro.js" />
+    <Content Include="js\ckeditor\lang\ru.js" />
+    <Content Include="js\ckeditor\lang\sk.js" />
+    <Content Include="js\ckeditor\lang\sl.js" />
+    <Content Include="js\ckeditor\lang\sr-latn.js" />
+    <Content Include="js\ckeditor\lang\sr.js" />
+    <Content Include="js\ckeditor\lang\sv.js" />
+    <Content Include="js\ckeditor\lang\th.js" />
+    <Content Include="js\ckeditor\lang\tr.js" />
+    <Content Include="js\ckeditor\lang\uk.js" />
+    <Content Include="js\ckeditor\lang\vi.js" />
+    <Content Include="js\ckeditor\lang\zh-cn.js" />
+    <Content Include="js\ckeditor\lang\zh.js" />
+    <Content Include="js\ckeditor\lang\_languages.js" />
+    <Content Include="js\ckeditor\lang\_translationstatus.txt" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="js\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="js\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="js\ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="js\ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="js\ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="js\ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="js\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="js\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="js\ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="js\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="js\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="js\ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="js\ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="js\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="js\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="js\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="js\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="js\ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="js\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="js\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="js\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="js\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="js\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="js\ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="js\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="js\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="js\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="js\ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="js\ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="js\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="js\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="js\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="js\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="js\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="js\ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="js\ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="js\ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="js\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="js\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="js\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="js\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="js\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="js\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="js\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="js\ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="js\ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="js\ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="js\ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="js\ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="js\ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="js\ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="js\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="js\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="js\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="js\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="js\ckeditor\plugins\xml\plugin.js" />
+    <Content Include="js\ckeditor\skins\kama\dialog.css" />
+    <Content Include="js\ckeditor\skins\kama\editor.css" />
+    <Content Include="js\ckeditor\skins\kama\icons.png" />
+    <Content Include="js\ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="js\ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="js\ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="js\ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="js\ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="js\ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="js\ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="js\ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="js\ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="js\ckeditor\skins\kama\skin.js" />
+    <Content Include="js\ckeditor\skins\kama\templates.css" />
+    <Content Include="js\ckeditor\skins\office2003\dialog.css" />
+    <Content Include="js\ckeditor\skins\office2003\editor.css" />
+    <Content Include="js\ckeditor\skins\office2003\icons.png" />
+    <Content Include="js\ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="js\ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="js\ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="js\ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="js\ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="js\ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="js\ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="js\ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="js\ckeditor\skins\office2003\skin.js" />
+    <Content Include="js\ckeditor\skins\office2003\templates.css" />
+    <Content Include="js\ckeditor\skins\v2\dialog.css" />
+    <Content Include="js\ckeditor\skins\v2\editor.css" />
+    <Content Include="js\ckeditor\skins\v2\icons.png" />
+    <Content Include="js\ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="js\ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="js\ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="js\ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="js\ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="js\ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="js\ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="js\ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="js\ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="js\ckeditor\skins\v2\skin.js" />
+    <Content Include="js\ckeditor\skins\v2\templates.css" />
+    <Content Include="js\ckeditor\themes\default\theme.js" />
+    <Content Include="html\Message_Board.aspx" />
+    <Content Include="picture\guetlogo.png" />
     <Content Include="html\file_up_load.html" />
     <Content Include="html\Files.aspx" />
     <Content Include="GL_login.html" />
@@ -68,6 +289,7 @@
     <Content Include="js\Particleground.js" />
     <Content Include="js\verificationNumbers.js" />
     <Content Include="App_Data\MyText.mdf" />
+    <Content Include="picture\sample.jpg" />
     <Content Include="style.css" />
     <Content Include="style2.css" />
     <Content Include="html\land.aspx" />
@@ -75,7 +297,9 @@
     <Content Include="html\废弃_html2.html" />
     <Content Include="html\use_to_change_my_information.aspx" />
     <Content Include="html\central frame.aspx" />
-    <Content Include="html\Up_load.aspx" />
+    <Content Include="html\废弃.aspx" />
+    <Content Include="style3.css" />
+    <Content Include="picture\title2.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -104,22 +328,36 @@
     <Compile Include="html\land.aspx.designer.cs">
       <DependentUpon>land.aspx</DependentUpon>
     </Compile>
+    <Compile Include="handler\Message_approve.ashx.cs">
+      <DependentUpon>Message_approve.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\Message_Board.ashx.cs">
+      <DependentUpon>Message_Board.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="html\Message_Board.aspx.cs">
+      <DependentUpon>Message_Board.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\Message_Board.aspx.designer.cs">
+      <DependentUpon>Message_Board.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="handler\register.ashx.cs">
       <DependentUpon>register.ashx</DependentUpon>
     </Compile>
-    <Compile Include="SqlHelper.cs" />
-    <Compile Include="html\Up_load.aspx.cs">
-      <DependentUpon>Up_load.aspx</DependentUpon>
+    <Compile Include="Sqlhelper\废弃1.cs" />
+    <Compile Include="html\废弃.aspx.cs">
+      <DependentUpon>废弃.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="html\Up_load.aspx.designer.cs">
-      <DependentUpon>Up_load.aspx</DependentUpon>
+    <Compile Include="html\废弃.aspx.designer.cs">
+      <DependentUpon>废弃.aspx</DependentUpon>
     </Compile>
     <Compile Include="handler\file_up_load.ashx.cs">
       <DependentUpon>file_up_load.ashx</DependentUpon>
     </Compile>
-    <Compile Include="use_change.cs" />
+    <Compile Include="Sqlhelper\SqlHelper.cs" />
+    <Compile Include="Sqlhelper\废弃2.cs" />
     <Compile Include="handler\use_to_change_my_information.ashx.cs">
       <DependentUpon>use_to_change_my_information.ashx</DependentUpon>
     </Compile>
@@ -145,6 +383,9 @@
     <Content Include="handler\register.ashx" />
     <Content Include="handler\Ajax_text.ashx" />
     <Content Include="handler\file_up_load.ashx" />
+    <Content Include="handler\Message_Board.ashx" />
+    <Content Include="js\ckeditor\.htaccess" />
+    <Content Include="handler\Message_approve.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

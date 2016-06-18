@@ -44,7 +44,7 @@ namespace AJAX
             else
                 password = 0;
 
-            DataTable ds = SqlHelper.ExecuteDataTable("select * from T_student where stdent_number=@number and pass_word=@password",
+            DataTable ds = SqlHelpers.SqlHelper.ExecuteDataTable("select * from T_student where stdent_number=@number and pass_word=@password",
                         new SqlParameter("@number", action), new SqlParameter("@password", password));
             if (ds.Rows.Count == 0)
             {

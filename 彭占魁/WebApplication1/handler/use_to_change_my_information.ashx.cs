@@ -43,9 +43,9 @@ namespace WebApplication1
             }
             try
             {
-                use_change.Executechange("insert into T_student(name,[class ID],stdent_number,pass_word,major,college,VIP,Cookie) values (@name,@class_ID,@student_number,@password,@major,@college,'False',@cookie)",
+                SqlHelpers.SqlHelper.ExecuteNonQuery("insert into T_student(name,[class ID],stdent_number,pass_word,major,college,VIP,Cookie) values (@name,@class_ID,@student_number,@password,@major,@college,'False',@cookie)",
                             new SqlParameter("@name", name), new SqlParameter("@student_number", student_number), new SqlParameter("@password", password), new SqlParameter("@major", major), new SqlParameter("@college", college), new SqlParameter("@cookie", cookie), new SqlParameter("@class_ID", class_ID));
-                use_change.Executechange("delete from T_student where ID=@ID", new SqlParameter("@ID", ID));
+                SqlHelpers.SqlHelper.ExecuteNonQuery("delete from T_student where ID=@ID", new SqlParameter("@ID", ID));
                 context.Response.Write("修改成功！");
             }
             catch

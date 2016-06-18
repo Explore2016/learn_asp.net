@@ -11,9 +11,10 @@
     <div style="text-align:center">
     <button onclick="button_xiugai()"style="background-color: aqua; color: violet">修改信息</button>
     <button onclick="button_quanbu()"style="background-color: magenta; color: white">全部信息</button>
+    <button onclick="button_Message()"style="background-color: magenta; color: white">留言板</button>
      <%if (VIP) {  %>
         <button onclick="button_file()"style="background-color: hotpink; color: white">上传文件</button>
-        <%} %>
+        <%} %> 
     <style>
 	button
 	{
@@ -90,7 +91,10 @@
              location.href = 'central frame.aspx';
          }
          function button_file() {
-             location.href = 'Up_load.aspx';
+             location.href = 'file_up_load.html';
+         }
+         function button_Message() {
+             location.href = 'Message_Board.aspx';
          }
     </script>
 </html>

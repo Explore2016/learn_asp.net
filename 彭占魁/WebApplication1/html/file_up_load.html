@@ -1,68 +1,36 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title>文件上传</title>
-    <meta name="author" content="DeathGhost" />
-    <link rel="stylesheet" type="text/css" href="../style2.css" />
-    <style>
-        body {
-            height: 100%;
-            background: #16a085;
-            overflow: hidden;
-        }
-
-        canvas {
-            z-index: -1;
-            position: absolute;
-        }
-    </style>
-    <script src="../js/Ajax.js"></script>
-    <script src="../js/jquery1.js"></script>
-    <script src="../js/verificationNumbers.js"></script>
-    <script src="../js/Particleground.js"></script>
-    <script>
-        $(document).ready(function () {
-            //粒子背景特效
-            $('body').particleground({
-                dotColor: '#5cbdaa',
-                lineColor: '#5cbdaa'
-            });
-            //验证码
-            createCode();
-            //测试提交，对接程序删除即可
-            $(".submit_btn").click(function () {
-                location.href = "index.html";
-            });
-        });
-        function up_file(){
-            Ajax("../handler/file_up_load.ashx?upload=" + upload.files, function (resText) {
-                alert(resText);             
-            }
-                )//ajax封装函数
-        }
-    </script>
+<!-- saved from url=(0053)http://exp.gliet.edu.cn/bysdacx/web/upload_excel.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link href="../style3.css" rel="stylesheet">
+    <title>毕业生档案上传</title>
 </head>
-<body>
-    <form enctype="multipart/form-data" method="post" dir="ltr" lang="zh-cn" action="../handler/file_up_load.ashx">
-            <input type="file" name="upload" />
-        <input type="text" name="name" />
-        <input type="submit" />
-         </form>
-  <!--   <dl class="admin_login">
-        <dt>
-            <strong>欢迎，这是管理员才能使用的文件上传</strong>
-            <em>Management System</em>
-        </dt>
-        <dd class="user_icon">
-            <input type="file" id="upload" />
-        </dd>
-         <dd>
-            <input type="button" value="上传文件" class="submit_btn2" onclick="up_file()"/>
-        </dd>
-        <dd>
-        </dd>-->
-    </dl>
-</body>
-</html>
+<body style="width:1280px; margin:auto">
+<div id="header">
+    <img src="../picture/guetlogo.png" class="logoImg">
+    <div id="top_container">
+        <h1><img src="../picture/title2.png"></h1>
+    </div>
 
+</div>
+<div id="content">
+    <div id="null"></div>
+     <div id="comtainer">
+         <ul id="notice">
+             <li style="font-size:18px;font-weight: bold;">注意：</li>
+             <li>1、请按此格式编辑Excel文件：</li>
+             <li><img src="../picture/sample.jpg"></li>
+             <li>2、上传的文件必须是.xls文件。 </li>
+             <li>3、第一列的文字之间不能有空格。</li>
+         </ul>
+         <div id="btn">
+             <form enctype="multipart/form-data" method="POST" dir="ltr" lang="zh-cn" action="../handler/file_up_load.ashx">
+             <input type="file" name="upload" value="选择文件" style="/*opacity:0;*/z-index:5;float:left;padding-top:7px; padding-left:13px; height:31px; width: 375px;">
+             <input type="text" name="name"  placeholder="文件名" style="/*opacity:0;*/z-index:5;float:left;padding-top:7px; padding-left:13px; height:31px; width: 375px;">
+             <input type="submit" value="文件上传" style="float:right;">
+             </form>
+         </div>
+     </div>
+</div>
+
+</body></html>

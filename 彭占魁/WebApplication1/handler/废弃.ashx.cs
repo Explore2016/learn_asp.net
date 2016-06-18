@@ -42,7 +42,7 @@ namespace WebApplication1
                 password = 0;
             //context.Response.Write("<font color='red'>Hello World ，"+action+"</font><br/>");
             //context.Response.Write("<font color='red'> 年龄为：" + age + "</font><br/>");
-            DataTable ds = SqlHelper.ExecuteDataTable("select * from T_student where stdent_number=@number and pass_word=@password",
+            DataTable ds = SqlHelpers.SqlHelper.ExecuteDataTable("select * from T_student where stdent_number=@number and pass_word=@password",
                         new SqlParameter("@number", action), new SqlParameter("@password",password));
             if (ds.Rows.Count == 0)
             {

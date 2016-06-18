@@ -19,7 +19,7 @@ namespace WebApplication1
         {
             //HttpCookie login = Request.Cookies["user"];
             string_info = Convert.ToInt32(Session["ID"]);
-            student_info = SqlHelper.ExecuteDataTable("select * from T_student where ID=@ID",
+            student_info = SqlHelpers.SqlHelper.ExecuteDataTable("select * from T_student where ID=@ID",
                          new SqlParameter[] { new SqlParameter("@ID",string_info) });
             if ((bool)student_info.Rows[0]["VIP"])
                 VIP = true;

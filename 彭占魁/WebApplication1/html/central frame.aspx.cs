@@ -22,14 +22,14 @@ namespace WebApplication1
             //HttpCookie login=Request.Cookies["user"];
             id =Convert.ToInt32(Session["ID"]);
             //str = (string)Session["user"];
-            stdent_info = SqlHelper.ExecuteDataTable("select * from T_student where ID=@ID",
+            stdent_info = SqlHelpers.SqlHelper.ExecuteDataTable("select * from T_student where ID=@ID",
                          new SqlParameter[] { new SqlParameter("@ID",id)});
             VIP_ID = Convert.ToInt32(stdent_info.Rows[0]["ID"]);
             if ((bool)stdent_info.Rows[0]["VIP"])
                 VIP = true;
             else        
                 VIP = false;
-            all_info = SqlHelper.ExecuteDataTable("select * from T_student");
+            all_info = SqlHelpers.SqlHelper.ExecuteDataTable("select * from T_student");
             
         }
     }
