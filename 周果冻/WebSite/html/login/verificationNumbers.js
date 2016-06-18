@@ -36,9 +36,9 @@ function validate () {
       return false;
     }
     else {
-      window.open(document.getElementById("J_down").getAttribute("data-link"));
-      document.getElementById("J_codetext").value="";
-      createCode();
+      //window.open(document.getElementById("J_down").getAttribute("data-link"));
+      //document.getElementById("J_codetext").value="";
+      //createCode();
       return true;
     }
 

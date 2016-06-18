@@ -37,6 +37,29 @@
                     alert("验证码错误！");
                     return;
                 }
+                else
+                {
+                    var usr = username.value;
+                    var paw = password.value;
+
+                    $.ajax({
+                        url: "../../ashx/login.ashx",
+                        type: "POST",
+                        data: {
+                            username: usr,
+                            password: paw,
+                        },
+                        success: function (res_text) {
+                            alert(res_text);
+                            if (res_text == "OK") {
+                                //location.href = "index.html";
+                            }
+                        },
+                        error: function (res_text) {
+                            alert("服务器错误");
+                        }
+                    });
+                }
             });
         });
     </script>
@@ -48,10 +71,10 @@
             <em>Management System</em>
         </dt>
         <dd class="user_icon">
-            <input type="text" placeholder="账号" class="login_txtbx" />
+            <input type="text" placeholder="账号" class="login_txtbx" id="username"/>
         </dd>
         <dd class="pwd_icon">
-            <input type="password" placeholder="密码" class="login_txtbx" />
+            <input type="password" placeholder="密码" class="login_txtbx" id="password"/>
         </dd>
         <dd class="val_icon">
             <div class="checkcode">
