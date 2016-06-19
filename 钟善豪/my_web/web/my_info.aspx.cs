@@ -31,6 +31,7 @@ namespace my_web
                 xingbie = dt.Rows[i]["sex"].ToString();
                 age = dt.Rows[i]["age"].ToString();
             }
+          
         }
     }
 }
