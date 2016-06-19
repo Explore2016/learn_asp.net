@@ -32,7 +32,7 @@
                     <tr>
                         <td style="text-align:left;"><%=table.Rows[i]["ID"] %>楼<br /><%=table.Rows[i]["Name"] %>:<br />
                           <%=table.Rows[i]["MessageContents"].ToString() %><br /><input type="button" onclick="support(<%=table.Rows[i]["ID"] %>,<%=i %>)" value="赞" />
-                         <label id="Approve<%=i %>"><%=table.Rows[i]["Approve"] %></label></td> 
+                         <label id="Approve<%=i %>"><%=table.Rows[i]["Approve"] %></label><br />时间：<%=table.Rows[i]["DataTime"] %></td> 
                     </tr>
                     <%} %>
                 </tbody>
