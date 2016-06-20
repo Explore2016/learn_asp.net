@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -296,6 +297,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="code\SqlHelper.cs" />
+    <Compile Include="code\UserServer.cs" />
     <Compile Include="handler\Login_ajax.ashx.cs">
       <DependentUpon>Login_ajax.ashx</DependentUpon>
     </Compile>
