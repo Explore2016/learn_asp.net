@@ -142,7 +142,7 @@
 	background: none; !important;
 	}
 #listBox{
-    width: 660px;
+    width: 863px;
     margin: 0 auto;
 }
 #inputBox{
@@ -152,16 +152,16 @@
 #listBox input{
     width: 75px;
     height: 30px;
-    border: 1px solid #5e8cb7;
-    background: #5e8cb7;
+    border: 1px solid white;
+    background: white;
     border-radius: 15px;
     text-align: center;
-    color: #fff;
-    margin-top: 10px;
+    color: #5e8cb7;
+    margin-top: 24px;
 }
 #Container{
     background: #5e8cb7;
-    width: 683px;
+    width: 816px;
     height: auto;
     border: 1px solid #5e8cb7;
     border-radius: 15px;

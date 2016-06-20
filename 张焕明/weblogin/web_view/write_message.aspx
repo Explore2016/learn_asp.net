@@ -4,8 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
- <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
     <title></title>
     <script src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/ckeditor/ckeditor.js"></script>
@@ -24,27 +24,26 @@
 </head>
 <body>
     <div id="listBox">
-        
+
         <div id="Container">
-            <table id="table_left" style="margin:25px;float:none;"><tbody>
-                <td><%=username%></td>
-                        
-                <%var user = username; %>
-                <%var word = password; %>
-                <%var nowtime = new DateTime();  %>
-                <td>
-                    
-                    <textarea name="financialbz"></textarea>
-                    <script type="text/javascript">CKEDITOR.replace('financialbz');</script>
-                    
-                </td>
-                
-                <dd>
-             <input type="button" value="提交" class="submit_btn2" onclick="refer('<% =user%>')"/><br/>
-            
-                </dd>
-                 </tbody></table>
-           <div style="clear:both;"></div>  
+            <table id="table_left" style="margin: 25px; float: none;">
+                <tr>
+                    <td><%=username%></td>
+                </tr>
+                <tr>
+                    <%var user = username; %>
+                    <%var word = password; %>
+                    <%var nowtime = new DateTime();  %>
+                    <td>
+                        <textarea name="financialbz"></textarea>
+                        <script type="text/javascript">CKEDITOR.replace('financialbz');</script>
+                    </td>
+                    <dd>
+                        <input type="button" value="提交" class="submit_btn2" onclick="refer('<% =user%>    ')" /><br />
+                    </dd>
+                </tr>
+            </table>
+            <div style="clear: both;"></div>
         </div>
     </div>
 
