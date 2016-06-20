@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Helper;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -19,6 +22,7 @@ namespace weblogin.ashx
             HttpPostedFile file = context.Request.Files["upload"]; //获取上传的文件
             if (file == null)
                 return;
+            string fileorgname = file.FileName;
             string filename = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName); //将文件名设置成guid值，避免重复
             string filepath = "../upload_files/" + filename; //生成文件路径
             //filename = GetMD5HashFromFile(file);
@@ -35,7 +39,12 @@ namespace weblogin.ashx
                 return;
             }
 
-            context.Response.Write("上传成功");
+             string conStr = ConfigurationManager.ConnectionStrings["ipname"].ConnectionString;
+             using (SqlConnection conn = new SqlConnection(conStr))
+             {
+                 SqlHelper.ExecuteDataTable("insert into T_address(Fileswhere,Filesname,Filesguid) values (@Filewhere,@Filename,@Fileguid)", new SqlParameter("@Filewhere", filepath), new SqlParameter("@Filename", fileorgname), new SqlParameter("@Fileguid", filename));
+                 context.Response.Write("上传成功");
+             }
         }
 
         public bool IsReusable

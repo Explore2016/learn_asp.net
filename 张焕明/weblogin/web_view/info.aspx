@@ -28,6 +28,9 @@
         function change(){
             location.href = 'change.aspx';
         }
+        function download(){
+            location.href = 'download.aspx';
+        }
     </script>
 </head>
 <body>
@@ -88,6 +91,7 @@
                         <td><%=shenfengzhen%></td>
                           
                          <th><input type="button" name="btnRight" value="修改个人信息" onclick="change()"></th></tr><tr>
+                             <th><input type="button" name="filesdownload"value="文件下载"onclick="download()"</th></tr><tr>
                          <% if(usertype == "1"){%>
                          <th><form method="post" enctype="multipart/form-data"action="../ashx/upload_file.ashx">
                             <input type="file" name="upload" /><input type="submit" />

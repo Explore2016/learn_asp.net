@@ -66,6 +66,7 @@
     <Content Include="js\jquery.min.js" />
     <Content Include="css\style.css" />
     <Content Include="web_view\change.aspx" />
+    <Content Include="web_view\download.aspx" />
     <Content Include="web_view\info.aspx" />
     <Content Include="web_view\login.html" />
     <Content Include="js\jquery1.js" />
@@ -75,6 +76,9 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="web_view\write_message.aspx" />
+    <Content Include="web_view\write_massage.html" />
+    <Content Include="web_view\message.aspx" />
     <Content Include="web_view\using.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -84,8 +88,17 @@
     <Compile Include="ashx\delete.ashx.cs">
       <DependentUpon>delete.ashx</DependentUpon>
     </Compile>
+    <Compile Include="ashx\file_download.ashx.cs">
+      <DependentUpon>file_download.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\message.ashx.cs">
+      <DependentUpon>message.ashx</DependentUpon>
+    </Compile>
     <Compile Include="ashx\upload_file.ashx.cs">
       <DependentUpon>upload_file.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\write_message.ashx.cs">
+      <DependentUpon>write_message.ashx</DependentUpon>
     </Compile>
     <Compile Include="person.cs" />
     <Compile Include="ashx\checkpassword.ashx.cs">
@@ -100,12 +113,26 @@
     <Compile Include="web_view\change.aspx.designer.cs">
       <DependentUpon>change.aspx</DependentUpon>
     </Compile>
+    <Compile Include="web_view\download.aspx.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_view\download.aspx.designer.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+    </Compile>
     <Compile Include="web_view\info.aspx.cs">
       <DependentUpon>info.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="web_view\info.aspx.designer.cs">
       <DependentUpon>info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_view\message.aspx.cs">
+      <DependentUpon>message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_view\message.aspx.designer.cs">
+      <DependentUpon>message.aspx</DependentUpon>
     </Compile>
     <Compile Include="web_view\using.aspx.cs">
       <DependentUpon>using.aspx</DependentUpon>
@@ -114,12 +141,22 @@
     <Compile Include="web_view\using.aspx.designer.cs">
       <DependentUpon>using.aspx</DependentUpon>
     </Compile>
+    <Compile Include="web_view\write_message.aspx.cs">
+      <DependentUpon>write_message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_view\write_message.aspx.designer.cs">
+      <DependentUpon>write_message.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="ashx\checkpassword.ashx" />
     <Content Include="ashx\delete.ashx" />
     <Content Include="ashx\change.ashx" />
     <Content Include="ashx\upload_file.ashx" />
+    <Content Include="ashx\file_download.ashx" />
+    <Content Include="ashx\write_message.ashx" />
+    <Content Include="ashx\message.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

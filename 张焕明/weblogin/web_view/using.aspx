@@ -28,6 +28,15 @@
         function change(){
             location.href = 'change.aspx';
         }
+        function writemessage(){
+            location.href = 'write_message.aspx';
+        }
+        function message(){
+            location.href = 'message.aspx';
+        }
+        function download(){
+            location.href = 'download.aspx';
+        }
     </script>
 </head>
 <body>
@@ -46,7 +55,7 @@
                 <%} %>
                         </tr><tr>
                         
-                            <%for (int i = tables.Rows.Count - 1 ; i > -1;  --i)
+                            <% for (int i = 0; i < tables.Rows.Count; i++)
           {
               
               string timeusername = tables.Rows[i]["Name"].ToString();
@@ -57,7 +66,7 @@
               else
               { %>
                             
-                        <td><%= i%></td>
+                        <td><%=i+1%></td>
                         <td><%=tables.Rows[i]["Name"].ToString()%></td>
                         <td><%=tables.Rows[i]["Password"].ToString()%></td>
                         <td><%=tables.Rows[i]["studentnumber"].ToString()%></td>
@@ -88,6 +97,9 @@
                         <td><%=shenfengzhen%></td>
                           
                          <th><input type="button" name="btnRight" value="修改个人信息" onclick="change()"></th></tr><tr>
+                         <th><input type="button" name="filesdownload"value="文件下载"onclick="download()"</th></tr><tr>
+                            <th><input type="button" name="filesdownload"value="写留言"onclick="writemessage()"</th></tr><tr>
+                              <th><input type="button" name="filesdownload"value="留言板"onclick="message()"</th></tr><tr>
                          <% if(usertype == "1"){%>
                          <th><form method="post" enctype="multipart/form-data"action="../ashx/upload_file.ashx">
                             <input type="file" name="upload" /><input type="submit" />
