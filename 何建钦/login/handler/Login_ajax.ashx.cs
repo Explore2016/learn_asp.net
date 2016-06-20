@@ -1,4 +1,5 @@
-﻿using SqlHelpers;
+﻿using login.handler;
+using SqlHelpers;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -19,7 +20,7 @@ namespace WebApplication.login
             context.Response.ContentType = "text/html";
             long ID=long.Parse(context.Request["ID"]);
             string Password = context.Request["Password"];
-            int count=(int)SqlHelper.ExecuteScalar("select count(*) from T_Students where ID=@ID", new SqlParameter("@ID", ID));
+            int count = UserServer.GetUserCount(ID);
             if (count <= 0)
             {
                 context.Response.Write("error_ID");
