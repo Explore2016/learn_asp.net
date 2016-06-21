@@ -37,7 +37,7 @@
         <div id="Container" style="width:663px;">
             <table id="table_left" style="margin:25px;float:none;">
                 <tbody>                    
-                    <% for (int i = 0; i < table.Rows.Count; i++)
+                    <% for (int i = table.Rows.Count-1; i >=0; i--)
                        { %>
                     <tr>
                         <td style="text-align:left;"><%=table.Rows[i]["ID"] %>楼<br /><%=table.Rows[i]["DataTime"] %><br /><%=table.Rows[i]["Name"] %>:<br /><%=table.Rows[i]["MessageContents"].ToString() %><br /><input type="button" onclick="support(<%=table.Rows[i]["ID"] %>,<%=i %>)" value="赞" /><label id="supports<%=i %>"><%=table.Rows[i]["Supports"] %></label></td> 

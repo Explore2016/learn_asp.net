@@ -1,4 +1,5 @@
-﻿using SqlHelpers;
+﻿using login.handler;
+using SqlHelpers;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -26,20 +27,16 @@ namespace login.web_forms
                 return;
             }
             long ID = long.Parse(Session["id"].ToString());
-            long Password = long.Parse(Session["password"].ToString());
-            int admin_ID =int.Parse(SqlHelper.ExecuteScalar("select Admin from T_Students where ID=@ID and Password=@Password",
-             new SqlParameter("@ID", ID),
-             new SqlParameter("@Password", Password)).ToString());
+            string Password = Session["password"].ToString();
+            int admin_ID = UserServer.CheckAdmin_ID(ID, Password);
             if (admin_ID == 1)
             {
                 if (Request["ID_del"] != null)
                 {
                     long ID_del = long.Parse(Request["ID_Del"]);
-                    int row = SqlHelper.ExecuteNonQuery("Delete from T_Students where ID=@ID ",
-                        new SqlParameter("@ID", ID_del)
-                    );
+                    int row = UserServer.DelStudent(ID_del);
                 }
-                table = SqlHelper.ExecuteDataTable("select * from T_Students"); 
+                table = UserServer.GetStudents_list(); 
             }
         }
     }

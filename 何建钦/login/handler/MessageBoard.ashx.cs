@@ -24,14 +24,9 @@ namespace login.handler
             context.Response.ContentType = "text/html";
             long ID = long.Parse(context.Session["id"].ToString());
             long Password = long.Parse(context.Session["password"].ToString());
-            string Name = SqlHelper.ExecuteScalar("select Name from T_Students where ID=@ID and Password=@Password",
-             new SqlParameter("@ID", ID),
-             new SqlParameter("@Password", Password)).ToString();
+            string Name = UserServer.GetMessageName(ID, Password);
             string Msg = context.Request["Msg"];
-            int row = SqlHelpers.SqlHelper.ExecuteNonQuery("Insert into T_MessageBoard(Name,MessageContents,Supports,DataTime) values(@Name,@MessageContents,0,GetDate())",
-                new SqlParameter("@Name",Name),
-                new SqlParameter("@MessageContents", Msg)
-                 );
+            int row = UserServer.LeaveAMessage(Name, Msg);
             context.Response.Redirect("../html/MessageBoard.aspx");
         }
 

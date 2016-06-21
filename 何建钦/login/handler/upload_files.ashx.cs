@@ -30,11 +30,7 @@ namespace login.handler
                 context.Response.Write(ex.Message);
                 return;
             }
-            int row = SqlHelpers.SqlHelper.ExecuteNonQuery("Insert into T_FilesList(FilesOrgName,FilesName,FilesPath) values(@FilesOrgName,@FilesName,@FilesPath)",
-                new SqlParameter("@FilesOrgName", FileOrgName),
-                new SqlParameter("@FilesName", FileName),
-                new SqlParameter("@FilesPath", FilePath)
-                );
+            int row = UserServer.SaveFile(FileOrgName, FileName, FilePath);
             context.Response.Redirect("../html/Files.aspx");
         }
 

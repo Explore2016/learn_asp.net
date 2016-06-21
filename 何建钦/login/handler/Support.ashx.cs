@@ -16,10 +16,8 @@ namespace login.handler
         {
             context.Response.ContentType = "text/plain";
             long ID = long.Parse(context.Request["id"]);
-            SqlHelpers.SqlHelper.ExecuteNonQuery("Update T_MessageBoard set Supports=Supports+1 where ID=@ID",
-                new SqlParameter("@ID", ID));
-            long count = long.Parse(SqlHelpers.SqlHelper.ExecuteScalar("Select Supports from T_MessageBoard where ID=@ID",
-                new SqlParameter("@ID", ID)).ToString());
+            UserServer.Support(ID);
+            long count = UserServer.GetSupportsCount(ID);
             context.Response.Write(count);
         }
 

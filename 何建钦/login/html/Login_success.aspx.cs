@@ -1,4 +1,5 @@
-﻿using SqlHelpers;
+﻿using login.handler;
+using SqlHelpers;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -28,9 +29,7 @@ namespace login.html
             }
             long ID = long.Parse(Session["id"].ToString());
             long Password = long.Parse(Session["password"].ToString());
-            table = SqlHelper.ExecuteDataTable("select * from T_Students where ID=@ID and Password=@Password",
-             new SqlParameter("@ID", ID),
-             new SqlParameter("@Password", Password));
+            table = UserServer.GetStuendt_list(ID, Password);
             if (int.Parse(table.Rows[0]["Admin"].ToString()) == 1)
             {
                 admin_btn="<input type='button' name='btnLeft' value='启用管理员身份' onclick='admin()'/>";
