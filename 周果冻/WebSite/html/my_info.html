@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>my info</title>
+    <script src="../js/AJAX.js"></script>
+    <script>
+        ajax("../Handler/get_info.ashx", function (resText) {
+            var info = JSON.parse(resText);
+            username.innerHTML += info.username;
+            namemm.innerHTML += info.name;
+            studentid.innerHTML += info.studentid;
+            department.innerHTML += info.department;
+            post.innerHTML += info.post;
+            phone.innerHTML += info.phone;
+        })
+    </script>
+</head>
+<body>
+    <h1 style="color: red;">你的信息</h1>
+    <button onclick="edit()">修改信息</button>
+    <h2 style="color: blue;">登录信息：</h2>
+    <p id="username">用户名：</p>
+    <p id="paw">密码：******</p>
+    <h2 style="color: blue;">基本信息</h2>
+    <p id="namemm">姓名：</p>
+    <p id="studentid">学号：</p>
+    <p id="department">部门：</p>
+    <p id="post">职务：</p>
+    <p id="phone">电话：</p>
+</body>
+</html>
+
