@@ -29,7 +29,7 @@ namespace login.html
             }
             long ID = long.Parse(Session["id"].ToString());
             long Password = long.Parse(Session["password"].ToString());
-            table = UserServer.GetStuendt_list(ID, Password);
+            table = UserServer.GetStudent_list(ID, Password);
             if (int.Parse(table.Rows[0]["Admin"].ToString()) == 1)
             {
                 admin_btn="<input type='button' name='btnLeft' value='启用管理员身份' onclick='admin()'/>";

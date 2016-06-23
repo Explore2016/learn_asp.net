@@ -20,7 +20,7 @@ namespace login.handler
                     new SqlParameter("@ID", ID),
                     new SqlParameter("@Password", Password));
         }
-        public static DataTable GetStuendt_list(long ID, long Password)
+        public static DataTable GetStudent_list(long ID, long Password)
         {
              return SqlHelper.ExecuteDataTable("select * from T_Students where ID=@ID and Password=@Password",
              new SqlParameter("@ID", ID),

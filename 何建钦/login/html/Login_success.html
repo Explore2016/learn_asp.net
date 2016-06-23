@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <title></title>
+    <script src="../js/ajax.js"></script>
+    <script type="text/javascript">
+        function Get_info() {
+            ajax("../handler/Get_info.ashx", function (resText) {
+                if (resText == null) {
+                    window.location.href="Login.html"
+                }
+                else {
+                    var info = JSON.parse(resText);
+                    document.getElementById("ID").innerHTML = info.Id;
+                    document.getElementById("Name").innerHTML = info.Name;
+                    document.getElementById("Gender").innerHTML = info.Gender;
+                    document.getElementById("Major").innerHTML = info.Major;
+                }
+            })
+        }
+    </script>
+</head>
+<body onload="Get_info()">
+    <div id="listBox">
+        <center>
+            <div id="Container">
+                <table id="table_left" style="margin: 25px; float: none;">
+                    <tbody>
+                        <tr>
+                            <th style="width: 100px">帐号：</th>
+                            <td id="ID"></td>
+                        </tr>
+                        <tr>
+                            <th style="width: 100px">姓名：</th>
+                            <td id="Name"></td>
+                        </tr>
+                        <tr>
+                            <th style="width: 100px">性别：</th>
+                            <td id="Gender"></td>
+                        </tr>
+                        <tr>
+                            <th style="width: 100px">专业：</th>
+                            <td id="Major"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="clear: both;"></div>
+            </div>
+        </center>
+        <div id="inputBox">
+            <input type="button" name="btnLeft" value="返回登录" onclick="window.location.href = '../html/Login.html';" />
+            <input type="button" name="btnLeft" id="Msg_btn" value="留言版"onclick="window.location.href = '../html/MessageBoard.aspx'"/><br />
+            <a href="Files.aspx"><input type="button" name="btnLeft" value="下载文件" /></a>
+            <input type="button" name="btnLeft" value="启用管理员身份" onclick="check()" />
+        </div>
+    </div>
+</body>
+</html>

@@ -63,6 +63,7 @@
     <Content Include="html\Admin.aspx" />
     <Content Include="html\Files.aspx" />
     <Content Include="html\Login_success.aspx" />
+    <Content Include="html\Login_success.html" />
     <Content Include="html\MessageBoard.aspx" />
     <Content Include="js\ckeditor\adapters\jquery.js" />
     <Content Include="js\ckeditor\ckeditor.js" />
@@ -298,6 +299,9 @@
   <ItemGroup>
     <Compile Include="code\SqlHelper.cs" />
     <Compile Include="code\UserServer.cs" />
+    <Compile Include="handler\Get_info.ashx.cs">
+      <DependentUpon>Get_info.ashx</DependentUpon>
+    </Compile>
     <Compile Include="handler\Login_ajax.ashx.cs">
       <DependentUpon>Login_ajax.ashx</DependentUpon>
     </Compile>
@@ -346,6 +350,7 @@
     <Content Include="js\ckeditor\.htaccess" />
     <Content Include="handler\MessageBoard.ashx" />
     <Content Include="handler\Support.ashx" />
+    <Content Include="handler\Get_info.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
