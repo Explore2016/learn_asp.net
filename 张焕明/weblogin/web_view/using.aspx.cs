@@ -1,4 +1,5 @@
 ﻿using Helper;
+using sql;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -42,9 +43,9 @@ namespace WebApplication2
             {
                 //if (vip == "1")
 
-                DataTable table = SqlHelper.ExecuteDataTable("select * from T_login where Name=@Name", new SqlParameter("@Name", username));
+                DataTable table = userservice.returnlogin(username);
                 //{
-                tables = SqlHelper.ExecuteDataTable("select * from T_login ");
+                tables = userservice.returnusing();
                 int a = table.Rows.Count;
                 DataRow row = table.Rows[a - 1];
                 {

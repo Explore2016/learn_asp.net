@@ -9,21 +9,21 @@ using Helper;
 
 namespace sql
 {
-    public class  userservice
+    public class userservice
     {
         public static DataTable checkpass(string name)
         {
             return SqlHelper.ExecuteDataTable("select * from T_login where Name=@Name",
             new SqlParameter("@Name", name));
         }
-        public static void somechange(string username, string password, string studyid,string iname,string myname)
+        public static void somechange(string username, string password, string studyid, string iname, string myname)
         {
             SqlHelper.ExecuteDataTable("update T_login set Password=@password,studentnumber=@studyid ,peoplename=@iname,Idcard=@myname where Name=@username", new SqlParameter("@username", username), new SqlParameter("@password", password), new SqlParameter("@studyid", studyid), new SqlParameter("@iname", iname), new SqlParameter("@myname", myname));
         }
         public static void outnews(string Id)
         {
             SqlHelper.ExecuteDataTable("delete from T_login where Name=@Id", new SqlParameter("@Id", Id));
- 
+
         }
         public static DataTable filedownload(long ID_dl)
         {
@@ -32,8 +32,8 @@ namespace sql
         }
         public static DataTable admin()
         {
-        return SqlHelper.ExecuteDataTable("select * from T_address");
-    }
+            return SqlHelper.ExecuteDataTable("select * from T_address");
+        }
         public static DataTable table_admin(long ID, long Password)
         {
             return SqlHelper.ExecuteDataTable("select * from T_login where Id=@ID and Password=@Password",
@@ -48,20 +48,47 @@ namespace sql
         {
             return (string)SqlHelper.ExecuteScalar("select praise from T_praise where Id =@id", new SqlParameter("@id", id));
         }
-        public static void upload(string filepath,string fileorgname,string filename)
+        public static void upload(string filepath, string fileorgname, string filename)
         {
             SqlHelper.ExecuteDataTable("insert into T_address(Fileswhere,Filesname,Filesguid) values (@Filewhere,@Filename,@Fileguid)", new SqlParameter("@Filewhere", filepath), new SqlParameter("@Filename", fileorgname), new SqlParameter("@Fileguid", filename));
         }
-        public static void writemessage(string user,string message,string writetime)
+        public static void writemessage(string user, string message, string writetime)
         {
             SqlHelper.ExecuteDataTable("insert into T_message(username,message,writetime) values (@username,@message,@writetime)", new SqlParameter("@username", user), new SqlParameter("@message", message), new SqlParameter("@writetime", writetime));
         }
 
         public static void praisemessage(string message, int praise)
         {
-                  SqlHelper.ExecuteDataTable("insert into T_praise(message,praise) values (@message,@praise)", new SqlParameter("@message", message), new SqlParameter("@praise", praise));
+            SqlHelper.ExecuteDataTable("insert into T_praise(message,praise) values (@message,@praise)", new SqlParameter("@message", message), new SqlParameter("@praise", praise));
         }
-
+        public static DataTable returnnews(string username)
+        {
+            return SqlHelper.ExecuteDataTable("select * from T_login where Name=@Name", new SqlParameter("@Name", username));
+        }
+        public static DataTable returnall()
+        {
+            return SqlHelper.ExecuteDataTable("select * from T_login ");
+        }
+        public static DataTable returnaddress()
+        {
+            return SqlHelper.ExecuteDataTable("select * from T_address ");
+        }
+        public static DataTable returnmessage()
+        {
+            return SqlHelper.ExecuteDataTable("select * from T_message ");
+        }
+        public static DataTable returnpraise()
+        {
+            return SqlHelper.ExecuteDataTable("select * from T_praise ");
+        }
+        public static DataTable returnlogin(string username)
+        {
+            return SqlHelper.ExecuteDataTable("select * from T_login where Name=@Name", new SqlParameter("@Name", username));
+        }
+        public static DataTable returnusing()
+        {
+          return  SqlHelper.ExecuteDataTable("select * from T_login ");
+        }
     }
 }
 //userservice

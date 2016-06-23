@@ -1,4 +1,5 @@
 ﻿using Helper;
+using sql;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -20,8 +21,8 @@ namespace weblogin.web_view
             string conStr = ConfigurationManager.ConnectionStrings["ipname"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(conStr))
             {
-                table = SqlHelper.ExecuteDataTable("select * from T_message ");
-               tables= SqlHelper.ExecuteDataTable("select * from T_praise ");
+                table = userservice.returnmessage();
+                tables = userservice.returnpraise();
             }
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Helper;
+using sql;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -22,7 +23,7 @@ namespace weblogin.web_view
                 //if (vip == "1")
                 //DataTable table = SqlHelper.ExecuteDataTable("select * from T_address where Name=@Name", new SqlParameter("@Name", username));
                 //{
-                table = SqlHelper.ExecuteDataTable("select * from T_address ");
+                table = userservice.returnaddress();
                 int a = table.Rows.Count;
                 //DataRow row = table.Rows[a - 1];
                 //{
