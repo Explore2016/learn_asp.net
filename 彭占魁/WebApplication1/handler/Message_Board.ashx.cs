@@ -22,12 +22,12 @@ namespace WebApplication1
                          new SqlParameter[] { new SqlParameter("@ID", ID) });
             string Msg = context.Request["Msg"];
             string Name = message.Rows[0]["name"].ToString();
-            string Data = DateTime.Now.ToLongTimeString();//获得当前时间
-            int row = SqlHelpers.SqlHelper.ExecuteNonQuery("Insert into T_MessageBoard(Name,MessageContents,Approve,DataTime) values(@Name,@MessageContents,0,@Data)",
-                new SqlParameter("@Name", Name),
-                new SqlParameter("@MessageContents", Msg),
-                new SqlParameter("@Data",Data)
-                 );
+            //string Data = DateTime.Now.ToLongTimeString();获得当前时间ashx方式，GetDate()是SQl方式
+            Use_way.Message_Board_insert(Name,Msg);
+                //SqlHelpers.SqlHelper.ExecuteNonQuery("Insert into T_MessageBoard(Name,MessageContents,Approve,DataTime) values(@Name,@MessageContents,0,GetDate())",
+                //new SqlParameter("@Name", Name),
+                //new SqlParameter("@MessageContents", Msg)
+                // );
             context.Response.Redirect("../html/Message_Board.aspx");
         }
 

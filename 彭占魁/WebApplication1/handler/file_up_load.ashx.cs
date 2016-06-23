@@ -38,7 +38,9 @@ namespace WebApplication1
                 context.Response.Write(ex.Message);
                 return;
             }
-            SqlHelpers.SqlHelper.ExecuteNonQuery("insert into F_address(Address,file_name) values(@Address,@file_name)", new SqlParameter("@Address", filepath), new SqlParameter("@file_name", file_name));
+            //SqlHelpers.SqlHelper.ExecuteNonQuery("insert into F_address(Address,file_name) values(@Address,@file_name)", new SqlParameter("@Address", filepath), new SqlParameter("@file_name", file_name));
+            //context.Response.Write("上传成功");
+            Use_way.file_up_load(filepath, file_name);
             context.Response.Write("上传成功");
         }
 

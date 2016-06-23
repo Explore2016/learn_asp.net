@@ -18,8 +18,9 @@ namespace WebApplication1
         {
             //HttpCookie login = Request.Cookies["user"];
             string_info = Convert.ToInt32(Session["ID"]);
-            student_info = SqlHelpers.SqlHelper.ExecuteDataTable("select * from T_student where ID=@ID",
-                         new SqlParameter[] { new SqlParameter("@ID", string_info) });
+            student_info = Use_way.select(string_info);
+                //SqlHelpers.SqlHelper.ExecuteDataTable("select * from T_student where ID=@ID",
+                //         new SqlParameter[] { new SqlParameter("@ID", string_info) });
         }
     }
 }

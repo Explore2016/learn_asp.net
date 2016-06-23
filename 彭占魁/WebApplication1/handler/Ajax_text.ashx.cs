@@ -46,6 +46,7 @@ namespace AJAX
 
             DataTable ds = SqlHelpers.SqlHelper.ExecuteDataTable("select * from T_student where stdent_number=@number and pass_word=@password",
                         new SqlParameter("@number", action), new SqlParameter("@password", password));
+            //DataTable ds = Use_way.Land(action, password);
             if (ds.Rows.Count == 0)
             {
                 context.Response.Write("账号不存在或者密码错误啦");

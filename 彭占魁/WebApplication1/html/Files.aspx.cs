@@ -19,8 +19,9 @@ namespace WebApplication1
             if (Request["ID_dl"] != null)
             {
                 long ID_dl = long.Parse(Request["ID_dl"]);
-                DataTable table_dl = SqlHelpers.SqlHelper.ExecuteDataTable("select * from F_address where ID=@ID",
-                    new SqlParameter("@ID", ID_dl));
+                DataTable table_dl = Use_way.select_all_F();
+                    //SqlHelpers.SqlHelper.ExecuteDataTable("select * from F_address where ID=@ID",
+                    //new SqlParameter("@ID", ID_dl));
                 //writefile实现下载，要有Using system.IO
                 string fileName = "text";//客户端保存的文件名
                 string filePath = Server.MapPath(table_dl.Rows[0]["Address"].ToString());//路径
@@ -37,7 +38,7 @@ namespace WebApplication1
                 Response.Flush();
                 Response.End();
             }
-            table = SqlHelpers.SqlHelper.ExecuteDataTable("select * from F_address");
+            table = Use_way.select_all_F();
         }
     }
 }

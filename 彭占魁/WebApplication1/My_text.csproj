@@ -375,6 +375,7 @@
     <Compile Include="html\central frame.aspx.designer.cs">
       <DependentUpon>central frame.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Use_way.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="handler\废弃.ashx" />

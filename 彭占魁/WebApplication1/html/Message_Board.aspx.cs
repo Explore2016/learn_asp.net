@@ -18,7 +18,8 @@ namespace WebApplication1
                 Context.Response.Redirect("../GL_login.html");
                 return;
             }
-            table = SqlHelpers.SqlHelper.ExecuteDataTable("select * from T_MessageBoard");
+            table = Use_way.select_all_T();
+                //SqlHelpers.SqlHelper.ExecuteDataTable("select * from T_MessageBoard");
         }
     }
 }

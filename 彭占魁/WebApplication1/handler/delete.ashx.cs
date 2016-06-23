@@ -17,7 +17,8 @@ namespace WebApplication1
         {
             context.Response.ContentType = "text/html";
             int ID = Convert.ToInt32(context.Request["ID"]);
-            SqlHelpers.SqlHelper.ExecuteNonQuery("delete from T_student where ID=@ID", new SqlParameter("@ID", ID));
+            //SqlHelpers.SqlHelper.ExecuteNonQuery("delete from T_student where ID=@ID", new SqlParameter("@ID", ID));
+            Use_way.delete(ID);
             context.Response.Write("<script>confirm('删除成功！');location.href='../html/central frame.aspx';</script>");
             //if (ds.Rows.Count == 0)
             //{
