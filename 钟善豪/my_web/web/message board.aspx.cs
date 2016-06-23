@@ -1,4 +1,5 @@
-﻿using System;
+﻿using my_web.cs;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -17,7 +18,8 @@ namespace my_web.web
         {
            id = Convert.ToInt32(Request["id"]);
           // Context.Session["id"] = id;
-           da = Sqlhelper1.ExecuteDataTable("select * from messageboard where id=@id", new SqlParameter("@id", id));        
+           da = UserServer.GetStuendt_list(id);
+          // da = Sqlhelper1.ExecuteDataTable("select * from messageboard where id=@id", new SqlParameter("@id", id));        
         }
     }
 }

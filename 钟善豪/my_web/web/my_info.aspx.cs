@@ -1,4 +1,5 @@
-﻿using System;
+﻿using my_web.cs;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -23,8 +24,10 @@ namespace my_web
             //HttpCookie cookie1 = Request.Cookies["id"];
             //id = cookie1.Value;
             id = (int)Context.Session["id"];
-            dt = Sqlhelper1.ExecuteDataTable("select * from student where id=@id", new SqlParameter("@id", id));
-            da = Sqlhelper1.ExecuteDataTable("select * from student ", new SqlParameter("@id", id));
+            dt = UserServer.GetTable(id);
+            da = UserServer.GetStuendts_list();
+           // dt = Sqlhelper1.ExecuteDataTable("select * from student where id=@id", new SqlParameter("@id", id));
+           // da = Sqlhelper1.ExecuteDataTable("select * from student ", new SqlParameter("@id", id));
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 name = dt.Rows[i]["name"].ToString();

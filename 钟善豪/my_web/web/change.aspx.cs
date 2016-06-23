@@ -1,4 +1,5 @@
-﻿using System;
+﻿using my_web.cs;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -16,7 +17,8 @@ namespace my_web
         protected void Page_Load(object sender, EventArgs e)
         {
              id = Convert.ToInt32(Request["id"]);
-             dt = Sqlhelper1.ExecuteDataTable("select * from student where id=@id", new SqlParameter("@id", id));
+             dt = UserServer.GetTable(id);
+             //dt = Sqlhelper1.ExecuteDataTable("select * from student where id=@id", new SqlParameter("@id", id));
 
         }
     }

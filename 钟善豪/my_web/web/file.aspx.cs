@@ -1,4 +1,5 @@
-﻿using System;
+﻿using my_web.cs;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -16,11 +17,13 @@ namespace my_web.web
         public string path;
         protected void Page_Load(object sender, EventArgs e)
         {
-            table = Sqlhelper1.ExecuteDataTable("select * from T_file ");
+            //table = Sqlhelper1.ExecuteDataTable("select * from T_file ");
+            table=UserServer.GetTable_files();
             if (Request["id"]!=null)
             {
                 long id = long.Parse(Request["id"]);
-                table = Sqlhelper1.ExecuteDataTable("select * from T_file where id=@id",new SqlParameter("@id",id));
+                table = UserServer.GetTable_file(id);
+                // table = Sqlhelper1.ExecuteDataTable("select * from T_file where id=@id",new SqlParameter("@id",id));
                 //writefile实现下载，要有Using system.IO
                 string fileName = table.Rows[0]["filename"].ToString();//客户端保存的文件名
                 string filePath = Server.MapPath(table.Rows[0]["filepath"].ToString());

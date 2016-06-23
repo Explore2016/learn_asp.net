@@ -1,4 +1,5 @@
-﻿using System;
+﻿using my_web.cs;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -27,7 +28,8 @@ namespace my_web
                 context.Response.Write("<script>alert('两次输入密码不一致！！');location.href = 'register.ashx';</script>");
             else
             {
-                Sqlhelper1.ExecuteScalar("insert into student (id,keys,name,sex,age)values (@id,@keys,@name,@sex,@age)", new SqlParameter("@id", id), new SqlParameter("@keys", key_1), new SqlParameter("@name", name), new SqlParameter("@sex", sex), new SqlParameter("@age", age));
+                UserServer.change(id,key_1,name,sex,age);
+               // Sqlhelper1.ExecuteScalar("insert into student (id,keys,name,sex,age)values (@id,@keys,@name,@sex,@age)", new SqlParameter("@id", id), new SqlParameter("@keys", key_1), new SqlParameter("@name", name), new SqlParameter("@sex", sex), new SqlParameter("@age", age));
                 context.Response.Write("注册成功！");
             }
 

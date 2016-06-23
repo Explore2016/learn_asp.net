@@ -1,4 +1,5 @@
-﻿using System;
+﻿using my_web.cs;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
@@ -39,7 +40,8 @@ namespace my_web.ashx
                 context.Response.Write(ex.Message);
                 return;
             }
-            Sqlhelper1.ExecuteNonQuery("Insert into T_file(filename,filepath) values(@filename,@filepath)", new SqlParameter("@filename", file_name), new SqlParameter("@filepath", filepath));
+            UserServer.upload_file(file_name, filepath);
+            //Sqlhelper1.ExecuteNonQuery("Insert into T_file(filename,filepath) values(@filename,@filepath)", new SqlParameter("@filename", file_name), new SqlParameter("@filepath", filepath));
             context.Response.Write("<script>alert('上传成功 ');location.href = '../web/file.aspx';</script>");
         }
 

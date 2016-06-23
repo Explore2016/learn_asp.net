@@ -1,4 +1,5 @@
-﻿using System;
+﻿using my_web.cs;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -21,8 +22,10 @@ namespace my_web
             string name = context.Request["name"];
             string sex = context.Request["sex"];
             string age = context.Request["age"];
-            Sqlhelper1.ExecuteScalar("delete from student where id=@id", new SqlParameter("@id", id));           
-            Sqlhelper1.ExecuteScalar("insert into student (id,keys,name,sex,age)values (@id,@keys,@name,@sex,@age)", new SqlParameter("@id", id), new SqlParameter("@keys", keys), new SqlParameter("@name", name), new SqlParameter("@sex", sex ), new SqlParameter("@age", age));
+            UserServer.delete(id);
+            UserServer.change(id,keys,name,sex,age);
+            //Sqlhelper1.ExecuteScalar("delete from student where id=@id", new SqlParameter("@id", id));           
+            //Sqlhelper1.ExecuteScalar("insert into student (id,keys,name,sex,age)values (@id,@keys,@name,@sex,@age)", new SqlParameter("@id", id), new SqlParameter("@keys", keys), new SqlParameter("@name", name), new SqlParameter("@sex", sex ), new SqlParameter("@age", age));
             context.Response.Write("修改成功!");
            
         }
