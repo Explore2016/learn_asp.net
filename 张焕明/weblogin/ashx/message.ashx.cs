@@ -1,4 +1,5 @@
 ﻿using Helper;
+using sql;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -17,8 +18,8 @@ namespace weblogin.ashx
         {
             context.Response.ContentType = "text/plain";
             string id = context.Request["Id"];
-            SqlHelper.ExecuteDataTable("Update T_praise set praise=praise+1 where Id =@id", new SqlParameter("@id", id));
-            string number = (string)SqlHelper.ExecuteScalar("select praise from T_praise where Id =@id", new SqlParameter("@id",id));
+            userservice.messageupdate(id);
+            string number = userservice.message(id);
             context.Response.Write(number);
         }
 

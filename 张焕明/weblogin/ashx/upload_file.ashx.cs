@@ -1,4 +1,5 @@
 ﻿using Helper;
+using sql;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -42,7 +43,7 @@ namespace weblogin.ashx
              string conStr = ConfigurationManager.ConnectionStrings["ipname"].ConnectionString;
              using (SqlConnection conn = new SqlConnection(conStr))
              {
-                 SqlHelper.ExecuteDataTable("insert into T_address(Fileswhere,Filesname,Filesguid) values (@Filewhere,@Filename,@Fileguid)", new SqlParameter("@Filewhere", filepath), new SqlParameter("@Filename", fileorgname), new SqlParameter("@Fileguid", filename));
+                 userservice.upload(filepath, fileorgname, filename);
                  context.Response.Write("上传成功");
              }
         }

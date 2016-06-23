@@ -1,4 +1,5 @@
 ﻿using Helper;
+using sql;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -25,7 +26,7 @@ namespace weblogin
             string conStr = ConfigurationManager.ConnectionStrings["ipname"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(conStr))
             {
-                DataTable table = SqlHelper.ExecuteDataTable("select * from T_login where Name=@Name", new SqlParameter("@Name", username));
+                DataTable table = userservice.checkpass(username);
                 foreach (DataRow row in table.Rows)
                 {
                     string name = (string)row["Name"];

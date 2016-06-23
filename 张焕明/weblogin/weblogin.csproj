@@ -100,7 +100,7 @@
     <Compile Include="ashx\write_message.ashx.cs">
       <DependentUpon>write_message.ashx</DependentUpon>
     </Compile>
-    <Compile Include="person.cs" />
+    <Compile Include="select.cs" />
     <Compile Include="ashx\checkpassword.ashx.cs">
       <DependentUpon>checkpassword.ashx</DependentUpon>
     </Compile>

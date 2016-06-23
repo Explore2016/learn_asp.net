@@ -1,4 +1,5 @@
 ﻿using Helper;
+using sql;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -29,8 +30,7 @@ namespace weblogin.ashx
             if (context.Request["ID_dl"] != null)
             {
                 long ID_dl = long.Parse(context.Request["ID_dl"]);
-                DataTable table_dl = SqlHelper.ExecuteDataTable("select * from T_address where Id=@ID",
-                    new SqlParameter("@ID", ID_dl));
+                DataTable table_dl = userservice.filedownload(ID_dl);
                 //writefile实现下载，要有Using system.IO
                 string fileName = table_dl.Rows[0]["Filesname"].ToString();//客户端保存的文件名
                 string filePath = System.Web.HttpContext.Current.Server.MapPath(table_dl.Rows[0]["Fileswhere"].ToString());//路径
@@ -48,12 +48,10 @@ namespace weblogin.ashx
                 context.Response.End();
             }
             DataTable table_Admin;
-            table = SqlHelper.ExecuteDataTable("select * from T_address");
+            table = userservice.admin();
             long ID = long.Parse(context.Session["id"].ToString());
             long Password = long.Parse(context.Session["password"].ToString());
-            table_Admin = SqlHelper.ExecuteDataTable("select * from T_login where Id=@ID and Password=@Password",
-             new SqlParameter("@ID", ID),
-             new SqlParameter("@Password", Password));
+            table_Admin = userservice.table_admin(ID, Password);
             if (int.Parse(table_Admin.Rows[0]["Admin"].ToString()) == 1)
             {
                 admin = 1;

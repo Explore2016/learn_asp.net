@@ -1,4 +1,5 @@
 ﻿using Helper;
+using sql;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -27,7 +28,7 @@ namespace weblogin.ashx
             string conStr = ConfigurationManager.ConnectionStrings["ipname"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(conStr))
             {
-                SqlHelper.ExecuteDataTable("update T_login set Password=@password,studentnumber=@studyid ,peoplename=@iname,Idcard=@myname where Name=@username", new SqlParameter("@username", username), new SqlParameter("@password", password), new SqlParameter("@studyid", studyid), new SqlParameter("@iname", iname), new SqlParameter("@myname", myname));
+                userservice.somechange(username, password, studyid, iname, myname);
                 context.Response.Write("成功更改");
             }
         }

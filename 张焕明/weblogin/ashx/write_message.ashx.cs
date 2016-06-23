@@ -1,4 +1,5 @@
 ﻿using Helper;
+using sql;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -30,8 +31,8 @@ namespace weblogin.ashx
               string conStr = ConfigurationManager.ConnectionStrings["ipname"].ConnectionString;
               using (SqlConnection conn = new SqlConnection(conStr))
               {
-                  SqlHelper.ExecuteDataTable("insert into T_message(username,message,writetime) values (@username,@message,@writetime)", new SqlParameter("@username", user), new SqlParameter("@message", message), new SqlParameter("@writetime", writetime));
-                  SqlHelper.ExecuteDataTable("insert into T_praise(message,praise) values (@message,@praise)", new SqlParameter("@message", message), new SqlParameter("@praise", praise));
+                  userservice.writemessage(user, message, writetime);
+                  userservice.praisemessage(message, praise);
                   context.Response.Write("发表成功");
               }
         }

@@ -1,4 +1,5 @@
 ﻿using Helper;
+using sql;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -22,7 +23,7 @@ namespace weblogin.ashx
             string conStr = ConfigurationManager.ConnectionStrings["ipname"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(conStr))
             {
-                SqlHelper.ExecuteDataTable("delete from T_login where Name=@Id", new SqlParameter("@Id", Id));
+                userservice.outnews(Id);
                 context.Response.Write("yes");
                 return;
             }
