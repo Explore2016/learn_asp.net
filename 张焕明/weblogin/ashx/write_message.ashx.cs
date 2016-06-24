@@ -20,7 +20,7 @@ namespace weblogin.ashx
             context.Response.ContentType = "text/plain";
             //string writetime = context.Request["nowtime"];
             string writetime = "aaa";
-            string user = context.Request["username"];
+            string user = (string)context.Session["user"];
             var praise = 0;
            
             string message = context.Request["message"];

@@ -28,11 +28,11 @@
         function change(){
             location.href = 'change.aspx';
         }
-        function writemessage(){
-            location.href = 'write_message.aspx';
+        function writemessage(id){
+            location.href = 'index.aspx?Id=' +id;
         }
-        function message(){
-            location.href = 'message.aspx';
+        function message(id){
+            location.href = 'index.aspx?Id=' +id;
         }
         function download(){
             location.href = 'download.aspx';
@@ -98,8 +98,8 @@
                           
                          <th><input type="button" name="btnRight" value="修改个人信息" onclick="change()"></th></tr><tr>
                          <th><input type="button" name="filesdownload"value="文件下载"onclick="download()"</th>
-                            <th><input type="button" name="filesdownload"value="写留言"onclick="writemessage()"</th>
-                              <th><input type="button" name="filesdownload"value="留言板"onclick="message()"</th>
+                            <th><input type="button" name="filesdownload"value="写留言"onclick="writemessage('<%=name%>')"</th>
+                              <th><input type="button" name="filesdownload"value="留言板"onclick="message('<%=name%>    ')"</th>
                          <% if(usertype == "1"){%>
                          <th><form method="post" enctype="multipart/form-data"action="../ashx/upload_file.ashx">
                             <input type="file" name="upload" /><input type="submit" />
