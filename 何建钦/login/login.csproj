@@ -60,11 +60,15 @@
   <ItemGroup>
     <Content Include="APP_Data\login.mdf" />
     <Content Include="APP_Data\login_log.ldf" />
+    <Content Include="css\css.css" />
     <Content Include="html\Admin.aspx" />
     <Content Include="html\Files.aspx" />
     <Content Include="html\Login_success.aspx" />
     <Content Include="html\Login_success.html" />
+    <Content Include="html\MB2.aspx" />
     <Content Include="html\MessageBoard.aspx" />
+    <Content Include="image\233.jpg" />
+    <Content Include="image\3_02.jpg" />
     <Content Include="js\ckeditor\adapters\jquery.js" />
     <Content Include="js\ckeditor\ckeditor.js" />
     <Content Include="js\ckeditor\ckeditor_basic.js" />
@@ -284,6 +288,7 @@
     <Content Include="js\ckeditor\skins\v2\skin.js" />
     <Content Include="js\ckeditor\skins\v2\templates.css" />
     <Content Include="js\ckeditor\themes\default\theme.js" />
+    <Content Include="js\jquery-3.0.0.min.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery1.js" />
     <Content Include="js\Particleground.js" />
@@ -335,6 +340,13 @@
     <Compile Include="html\Login_success.aspx.designer.cs">
       <DependentUpon>Login_success.aspx</DependentUpon>
     </Compile>
+    <Compile Include="html\MB2.aspx.cs">
+      <DependentUpon>MB2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\MB2.aspx.designer.cs">
+      <DependentUpon>MB2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="html\MessageBoard.aspx.cs">
       <DependentUpon>MessageBoard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -358,9 +370,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="files\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

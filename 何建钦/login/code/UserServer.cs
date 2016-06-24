@@ -68,7 +68,7 @@ namespace login.handler
         }
         public static int LeaveAMessage(string Name,string Msg)
         {
-            return SqlHelpers.SqlHelper.ExecuteNonQuery("Insert into T_MessageBoard(Name,MessageContents,Supports,DataTime) values(@Name,@MessageContents,0,GetDate())",
+            return SqlHelpers.SqlHelper.ExecuteNonQuery("Insert into T_MessageBoard(Name,MessageContents,Supports,DataTime) values(@Name,@MessageContents,0,convert(varchar(10),getdate(),102))",
                 new SqlParameter("@Name", Name),
                 new SqlParameter("@MessageContents", Msg)
                  );

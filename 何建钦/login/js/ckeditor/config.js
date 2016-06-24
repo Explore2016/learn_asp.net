@@ -7,5 +7,12 @@ CKEDITOR.editorConfig = function( config )
 {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
-	// config.uiColor = '#AADC6E';
+    // config.uiColor = '#AADC6E';
+    
+    config.width = 700;
+    config.height = 235;
+    config.toolbar_Full = [['Bold', 'Italic', 'Underline', 'Strike','-', 'RemoveFormat'],
+        ['NumberedList', 'BulletedList', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+        ['Font'], ['FontSize'], ['TextColor', 'BGColor'], ['Link', 'Unlink'], ['Smiley'], ['Maximize']
+    ];
 };

@@ -69,7 +69,7 @@
         </center>
         <div id="inputBox">
             <input type="button" name="btnLeft" value="返回登录" onclick="window.location.href = '../html/Login.html';"/>
-            <input type="button" name="btnLeft" id="Msg_btn" value="留言版" <%--onclick="window.location.href = '../html/MessageBoard.aspx'"--%>/><br />
+            <input type="button" name="btnLeft" id="Msg_btn" value="留言板" <%--onclick="window.location.href = '../html/MessageBoard.aspx'"--%>/><br />
             <a href="Files.aspx"><input type="button" name="btnLeft" value="下载文件" /></a>
             <%=admin_btn %>
            <%-- <input type="button" name="btnLeft" value="启用管理员身份" onclick="check()"/>--%>
