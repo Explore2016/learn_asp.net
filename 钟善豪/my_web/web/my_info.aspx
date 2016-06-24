@@ -43,8 +43,8 @@
                 <td><%=da.Rows[j]["age"].ToString() %></td>                           
                 <th><a href="../ashx/delete.ashx?id=<%=da.Rows[j]["id"] %>"> <input type="button" name="btnLeft" value="删除" onclick=""/></a>
                 <th><a href="change.aspx?id=<%=da.Rows[j]["id"] %>"> <input type="button" name="btnLeft" value="编辑" onclick=""/></a>    
-                 <th><a href="message board.aspx?id=<%=da.Rows[j]["id"] %>"> <input type="button" name="btnLeft" value="留言" onclick=""/></a>             
-            </tr> <%} %>
+                 <th><a href="indix.aspx?id=<%=da.Rows[j]["id"] %>"> <input type="button" name="btnLeft" value="留言" onclick=""/></a>             
+            </tr> <%} %>            
             </tbody></table>
            <div style="clear:both;"></div>  
         </div>

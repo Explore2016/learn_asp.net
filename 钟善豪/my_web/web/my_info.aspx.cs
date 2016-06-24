@@ -24,6 +24,7 @@ namespace my_web
             //HttpCookie cookie1 = Request.Cookies["id"];
             //id = cookie1.Value;
             id = (int)Context.Session["id"];
+            Context.Session["use"] = id;
             dt = UserServer.GetTable(id);
             da = UserServer.GetStuendts_list();
            // dt = Sqlhelper1.ExecuteDataTable("select * from student where id=@id", new SqlParameter("@id", id));

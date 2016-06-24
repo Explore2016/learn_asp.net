@@ -59,8 +59,14 @@
   <ItemGroup>
     <Content Include="APP_Data\mytest.mdf" />
     <Content Include="APP_Data\mytest_log.ldf" />
+    <Content Include="css\css.css" />
+    <Content Include="image\233.jpg" />
+    <Content Include="image\3_02.jpg" />
+    <Content Include="js\jquery-3.0.0.min.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery1.js" />
+    <Content Include="web\indix.aspx" />
+    <Content Include="web\indix.html" />
     <Content Include="web\message board.aspx" />
     <Content Include="web\file.aspx" />
     <Content Include="web\my_info.aspx" />
@@ -99,6 +105,13 @@
     </Compile>
     <Compile Include="web\file.aspx.designer.cs">
       <DependentUpon>file.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\indix.aspx.cs">
+      <DependentUpon>indix.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\indix.aspx.designer.cs">
+      <DependentUpon>indix.aspx</DependentUpon>
     </Compile>
     <Compile Include="web\message board.aspx.cs">
       <DependentUpon>message board.aspx</DependentUpon>

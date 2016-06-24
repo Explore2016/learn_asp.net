@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="../js/ckeditor/ckeditor.js"></script>
     <title></title>
-    <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <link href="../css/style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body> 
      <h1 align="center" >留言板</h1>
