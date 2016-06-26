@@ -1,6 +1,7 @@
 ﻿using my_web.cs;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -17,11 +18,13 @@ namespace my_web.ashx
         {
             context.Response.ContentType = "text/plain";
             string action = context.Request["action"];
-            string name = context.Request["name"];     
+            string name = context.Request["name"];
+            string time = context.Request["time"];
+           
             if (action == "zan")
             {
-                UserServer.Update_zan(name);
-                int zancount = UserServer.zancount(name);
+                UserServer.Update_zan(name,time);
+                int zancount = UserServer.zancount(name,time);
                 //Sqlhelper1.ExecuteNonQuery("Update messageboard set zancount=zancount+1 where name=@name ", new SqlParameter("@name", name));
                 //int zancount = (int)Sqlhelper1.ExecuteScalar("select top 1 zancount from messageboard  where name=@name", new SqlParameter("@name", name));
                 context.Response.Write(zancount);

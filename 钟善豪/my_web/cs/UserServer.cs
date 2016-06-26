@@ -49,17 +49,17 @@ namespace my_web.cs
         {
             Sqlhelper1.ExecuteNonQuery("Insert into T_file(filename,filepath) values(@filename,@filepath)", new SqlParameter("@filename", file_name), new SqlParameter("@filepath", filepath));
         }
-        public static void Update_zan(string name)
+        public static void Update_zan(string name,string time)
         {
-            Sqlhelper1.ExecuteNonQuery("Update messageboard set zancount=zancount+1 where name=@name ", new SqlParameter("@name", name));
+            Sqlhelper1.ExecuteNonQuery("Update messageboard set zancount=zancount+1 where name=@name and time=@time ", new SqlParameter("@name", name), new SqlParameter("@time", time));
         }
         public static void Update_cai(string name)
         {
             Sqlhelper1.ExecuteNonQuery("Update messageboard set caicount=caicount+1 where name=@name ", new SqlParameter("@name", name));
         }
-        public static int zancount(string name)
+        public static int zancount(string name,string time)
         {
-            return (int)Sqlhelper1.ExecuteScalar("select top 1 zancount from messageboard  where name=@name", new SqlParameter("@name", name));
+            return (int)Sqlhelper1.ExecuteScalar("select top 1 zancount from messageboard  where name=@name and time=@time", new SqlParameter("@name", name), new SqlParameter("@time", time));
         }
         public static int caicount(string name)
         {

@@ -18,7 +18,7 @@ namespace my_web
         {
             context.Response.ContentType = "text/html";
             string use = context.Request["use"];
-             string password = context.Request["password"];
+            string password = context.Request["password"];
             DataTable ds = UserServer.login(use,password);
             //DataTable ds = Sqlhelper1.ExecuteDataTable("select * from student where id=@id and  keys=@keys", new SqlParameter("@id", use), new SqlParameter("@keys", password));
             if (ds.Rows.Count == 1)

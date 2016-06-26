@@ -23,6 +23,7 @@ namespace my_web
         {
             //HttpCookie cookie1 = Request.Cookies["id"];
             //id = cookie1.Value;
+            //id = Convert.ToInt32(Request["id"]);
             id = (int)Context.Session["id"];
             Context.Session["use"] = id;
             dt = UserServer.GetTable(id);

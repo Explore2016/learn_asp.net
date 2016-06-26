@@ -80,11 +80,15 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="web\my_info.html" />
     <Content Include="web\register.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ashx\change.ashx.cs">
       <DependentUpon>change.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\get_info.ashx.cs">
+      <DependentUpon>get_info.ashx</DependentUpon>
     </Compile>
     <Compile Include="ashx\login.ashx.cs">
       <DependentUpon>login.ashx</DependentUpon>
@@ -150,6 +154,7 @@
     <Content Include="ashx\login.ashx" />
     <Content Include="ashx\message board.ashx" />
     <Content Include="ashx\zancai.ashx" />
+    <Content Include="ashx\get_info.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

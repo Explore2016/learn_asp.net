@@ -1,0 +1,64 @@
+﻿
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <title></title>
+    <script src="../js/ajax.js"></script>
+    <script type="text/javascript">
+        function Get_info() {
+            ajax("../ashx/get_info.ashx", function (resText) {
+          
+                    var info = JSON.parse(resText);
+                    document.getElementById("id").innerHTML = info.id;
+                    document.getElementById("name").innerHTML = info.name;
+                    document.getElementById("sex").innerHTML = info.sex;
+                    document.getElementById("age").innerHTML = info.age;
+                
+            })
+        }
+    </script>
+</head>
+<body onload="Get_info()">
+    <div id="listBox">
+        <center>
+       <form id="form1" runat="server">
+      
+        <div id="inputBox">
+            <a href="login.html"><input type="button" name="btnLeft" value="返回登录" onclick="next(--week)"/></a>
+             <a href="file.aspx"><input type="button" name="btnRight" value="上传文件" onclick="next(++week)"/></a>
+        </div>
+            <div id="Container">
+                <table id="table_left" style="margin: 25px; float: none;">
+                    <tbody>
+                        <tr>
+                            <th style="width: 100px">帐号</th>
+                            <th style="width: 100px">姓名</th>
+                            <th style="width: 100px">性别</th>
+                            <th style="width: 100px">年龄</th>
+                          
+                        </tr>
+                        <tr>
+                            <td id="id"></td>
+                            <td id="name"></td>
+                            <td id="sex"></td>
+                            <td id="age"></td>
+              <th> <input type="button" name="btnLeft" value="全体人员" onclick="information()"/></th>
+                 
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="clear: both;"></div>
+            </div>
+        </center>
+       
+    </div>
+</body>
+     <script>
+         function information()
+         {
+             location.href = 'my_info.aspx?';
+         }
+     </script>
+</html>

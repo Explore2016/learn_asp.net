@@ -9,8 +9,8 @@ CKEDITOR.editorConfig = function (config) {
     // config.uiColor = '#AADC6E';
     config.image_previewText = ' '; //预览区域显示内容
     config.filebrowserImageUploadUrl = "../admin_handler/upload_file.ashx"; //待会要上传的action或servlet
-    config.height = 200; //设置高度。
-    config.width = 750; //设置宽度。
+    config.height = 100; //设置高度。
+    config.width = 700; //设置宽度。
 
     config.toolbar = 'Full'; config.toolbar_Full = [
         { name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike', '-', 'RemoveFormat'] },
