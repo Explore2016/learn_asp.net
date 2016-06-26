@@ -25,30 +25,17 @@
     </style>
     </div>
     <form id="form1" runat="server">
-         <link href="../style.css" type="text/css" rel="stylesheet"/>
+         <link href="../css/style.css" type="text/css" rel="stylesheet"/>
     <div id="listBox">
         <div id="Container">
     <table id="table_right" style="margin:25px;float:none;">
      <tr>
             <th class="t6">属性</th>
             <th class="t7">内容</th>
-          <%--  <th class="t3">class_ID</th>
-            <th class="t3">stdent_number</th>
-            <th class="t3">password</th>
-            <th class="t4">major</th>
-            <th class="t4">college</th>
-            <th class="t5">cookie</th>--%>
       </tr> 
        <tr>
             <td>ID</td>
             <td><%=student_info.Rows[0]["ID"] %></td>
-           <%-- <td><%=student_info.Rows[0]["name"] %></td>
-            <td><%=student_info.Rows[0]["class ID"] %></td>
-            <td><%=student_info.Rows[0]["stdent_number"] %></td>
-            <td><%=student_info.Rows[0]["pass_word"] %></td>
-            <td><%=student_info.Rows[0]["major"] %></td>
-            <td><%=student_info.Rows[0]["college"] %></td>
-            <td><%=student_info.Rows[0]["Cookie"] %></td>--%>
         </tr>
         <tr>
             <td>姓名</td>

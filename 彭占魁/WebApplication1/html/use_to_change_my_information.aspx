@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <title>修改信息</title>
     <meta name="author" content="DeathGhost" />
-    <link rel="stylesheet" type="text/css" href="../style2.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style2.css" />
     <style>
         body {
             height: 100%;

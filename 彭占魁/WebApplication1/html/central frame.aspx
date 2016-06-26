@@ -9,7 +9,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <link href="../style.css" type="text/css" rel="stylesheet"/>
+        <link href="../css/style.css" type="text/css" rel="stylesheet"/>
     <div id="listBox">
         <div id="Container">
         <table id="table_right" style="margin:25px;float:none;">

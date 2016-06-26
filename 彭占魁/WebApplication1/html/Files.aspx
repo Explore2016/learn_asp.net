@@ -4,7 +4,7 @@
 <head id="Head1" runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="../style.css" type="text/css" rel="stylesheet"/>
+    <link href="../css/style.css" type="text/css" rel="stylesheet"/>
      <script type="text/javascript">
          function Dwonload_File(id){
              var DlOrNot = confirm("请确认是否下载该文件？");

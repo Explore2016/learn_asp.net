@@ -61,8 +61,8 @@ namespace AJAX
                     string college = (string)row["college"];
                     string cookie = (string)row["cookie"];
                     int ID = (int)row["ID"];
-                    //context.Response.SetCookie(new HttpCookie("user", cookie));
-                    //context.Session["user"] = cookie;
+                    //context.Response.SetCookie(new HttpCookie("login", cookie));
+                    //context.Session["login"] = ID.ToString();
                     context.Session["ID"] = ID.ToString();
                     context.Response.Write("欢迎,学院:" +college+ "，专业：" + major + ",班级：" + classID + ",姓名：" + name+"同学");
                 }
