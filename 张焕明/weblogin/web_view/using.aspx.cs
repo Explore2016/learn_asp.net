@@ -7,10 +7,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Script.Serialization;
 using System.Web.SessionState;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebApplication2;
+using weblogin.web_view;
 
 namespace WebApplication2
 {
@@ -57,6 +59,9 @@ namespace WebApplication2
                     xuehao = Convert.ToString(row["studentnumber"]);
                     shenfengzhen = Convert.ToString(row["Idcard"]);
                 }
+                List<Person> list = new List<Person>();
+                JavaScriptSerializer jss = new JavaScriptSerializer();
+                string json = jss.Serialize(new Person { Name = name, PassWord = mima, UserName = xingming, StudyId = xuehao, Personname = shenfengzhen });
                 //}
                 //else {
                 //    tables = Sqlhelper.ExecuteDataTable("select * from T_xuesheng where Name=@Name", new SqlParameter("@Name", username));

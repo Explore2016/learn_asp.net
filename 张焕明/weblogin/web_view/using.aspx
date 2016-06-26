@@ -7,6 +7,18 @@
     <link href="../css/style.css" type="text/css" rel="stylesheet">
     <title></title>
     <script src="../js/jquery.min.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/json2.js"></script>
+<script>
+    ajax("../ashx/nameuser.ashx", function (resText) {
+        var info = JSON.parse(resText);
+        namese.innerHTML=info.Name;
+        mima.innerHTML+=info.PassWord;
+        xuehao.innerHTML+=info.StudyId;
+        xingming.innerHTML+=info.UserName;
+        shenfengzhen.innerHTML+=info.Personname;
+    })
+    </script>
     <script type="text/javascript">
         function remove(timeId) {
             var remove = confirm("是否确定删除该用户？")
@@ -17,6 +29,7 @@
                     }
                     else {
                         alert('未知错误！');
+                        
                     }
                 
                 })
@@ -90,11 +103,12 @@
                        <th class="t5">更改信息</th>
                        </tr><tr>
                        <td>1</td>
-                       <td><%=name%></td>
-                        <td><%=mima%></td>
-                        <td><%=xuehao%></td>
-                        <td><%=xingming%></td>
-                        <td><%=shenfengzhen%></td>
+                           
+                       <td id="namese"></td>
+                        <td id="mima"></td>
+                        <td id="xuehao"></td>
+                        <td id="xingming"></td>
+                        <td id="shenfengzhen"></td>
                           
                          <th><input type="button" name="btnRight" value="修改个人信息" onclick="change()"></th></tr><tr>
                          <th><input type="button" name="filesdownload"value="文件下载"onclick="download()"</th>
@@ -110,19 +124,7 @@
         </div>
     </div>
     
-    <script>
-        var week = 0;
-        function next(week) {
-            $.ajax({
-                url: '../handler/info.ashx?info=All&week=' + week,
-                type: 'post',
-                success: function (re) {
-                    table_left.innerHTML = re;
-                }
-            })
-        }
-        next(week);
-    </script>
+
     <br>
     <br>
     <br>

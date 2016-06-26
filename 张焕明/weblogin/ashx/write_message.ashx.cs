@@ -6,13 +6,14 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 
 namespace weblogin.ashx
 {
     /// <summary>
     /// write_massage 的摘要说明
     /// </summary>
-    public class write_massage : IHttpHandler
+    public class write_massage : IHttpHandler, IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)

@@ -12,17 +12,46 @@
 <script type="text/javascript" src="../js/ckeditor/ckeditor.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $("#grey").click(function () {
+            $("#writedown").click(function () {
                 var data = CKEDITOR.instances.financialbz.getData();
+                if (data == "") {
+                    document.write("输入为空！");
+                }
                 var mege = encodeURI(data);
                 data = data.replace(/&/g, "<.and.>");
                 data = data.replace(/#/g, "<.shup.>");
-
-
-                location.href = '../ashx/write_message.ashx?&message=' + data;
+                $.ajax({
+                    url: "../ashx/write_message.ashx?message="+data,
+                    type: 'post',
+                    success: function (re) {
+                        table_left.innerHTML = re;
+                    }
+                })
             }
-            )})
+            )
+            $("#writedown").click
+        })
     </script>
+    <script>
+
+        $(document).ready(function () {
+            $("#zan").click(function () {
+                var zan_now = $(this).find("span");
+                var ID = zan_now[0].id;
+                htmlobj = $.ajax({ url: "/jquery/test1.txt", async: false });
+                $(this).find("span").innerHTML = htmlobj.responseText;
+                //$ajax({
+                //    url:'../ashx/message.ashx?Id=' + ID,
+                //    success: function (reTxt) {
+                //        $(this).find("span").innerHTML = reTxt;
+                //    }
+                //function (resTxt) {
+                // var zan_count = "resTxt"; //这里我自己设定了一个值，你们应该用ajax从数据库中获取
+                // $(this).find("span").innerHTML = zan_count;
+            })
+        });
+        //})
+          </script>
 </head>
 
 <body style="background-color:#FFF">
@@ -49,7 +78,7 @@
   <!--主体-->
   <div id="main">
     <!--留言框-->
-    <div class="bule">
+    <div class="bulel">
         <span style="color:#FFF;margin-left:5px;">当前用户：<%=username %></span><span id="identity" style="color:#FFF;font-weight:bold;"><%=usertype %></span>
         <span style="margin-left:10px;" ><a id="login2" href="login.html" style="color:#00C;text-decoration:underline">登陆</a></span>
         <span style="float:right;color:#FFF;margin-right:10px;">当前时间:<script type="text/javascript">document.write(Date())</script></span>
@@ -59,36 +88,28 @@
           <script type="text/javascript">CKEDITOR.replace('financialbz');</script>
       </div>
           <a href="">
-              <div id="grey" style="float:right;" class="grey">发&nbsp;&nbsp;&nbsp;表
+              <div id="writedown" style="float:right;" class="grey">发&nbsp;&nbsp;&nbsp;表
               </div>
           </a>
     </div>
     <!--历史留言框 可多加可重复-->
       <% for (int i = 0; i < table.Rows.Count; i++)
                        { %>
+      <div></div>
     <div class="bule">
+
           <div style="height:48px;">
           	<div style="float:left;" class="grey">用户：<%=table.Rows[i]["username"].ToString() %>
           	</div>
-              <div style="float:left;" class="grey"><%=i+1 %>楼
+              <div style="float:left;" class="grey"id="name"><%=i+1 %>楼
           	</div>
             <% long ID = long.Parse(table.Rows[i]["Id"].ToString()); %>
-            <div  id="zan(<%=ID %>)">
+            <div  class="zan">
             <span style="color:#FFF;float:right;padding-top:10px;font-size:25px;"><%=tables.Rows[i]["praise"]%></span>
             <img  style="float:right;" src="../image/233.jpg" />
             </div>
           </div>
-          <script>
-              $("#zan").click(function () {
-                  ajax('../ashx/message.ashx?Id=' + ID, function (resTxt) {
-                      var zan_count = "resTxt"; //这里我自己设定了一个值，你们应该用ajax从数据库中获取
-                      var zan_now = $(this).find("span");
-                      zan_now[0].innerHTML = zan_count;
-                      $(this).find("span").innerHTML = zan_count;
-                  })
-              });
-              
-          </script>
+          
           <div class="auto">
               <%=table.Rows[i]["message"].ToString() %>
           </div>
