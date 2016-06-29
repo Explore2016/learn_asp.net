@@ -5,7 +5,7 @@
     <title>my info</title>
     <script src="../js/AJAX.js"></script>
     <script>
-        ajax("../Handler/get_info.ashx", function (resText) {
+        ajax("../ashx/get_info.ashx", function (resText) {
             var info = JSON.parse(resText);
             username.innerHTML += info.username;
             namemm.innerHTML += info.name;
