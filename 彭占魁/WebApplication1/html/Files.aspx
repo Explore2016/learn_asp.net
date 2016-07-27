@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>下载文件</title>
     <link href="../css/style.css" type="text/css" rel="stylesheet"/>
      <script type="text/javascript">
          function Dwonload_File(id){

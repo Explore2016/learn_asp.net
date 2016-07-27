@@ -32,6 +32,7 @@ namespace WebApplication1
                 VIP = false;
             all_info = Use_way.select_all();
             //SqlHelpers.SqlHelper.ExecuteDataTable("select * from T_student");
+           
             
         }
     }
