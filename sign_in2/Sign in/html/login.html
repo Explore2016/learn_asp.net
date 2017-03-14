@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <title>求索签到系统</title>
+</head>
+<body>
+     <div id="loginbox">
+     <form id="indexform" action="../handler/login.ashx" name="form" method="post">
+         <p>学号：<input type="text" name="userid" class="idInput" onkeyup="value=value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/></p>
+         <p>
+             <input type="submit" name="login" value="开始签到" class="btn"/>
+             <input type="reset" name="reset" value="清除" class="btn" />
+         </p>
+     </form>
+     </div>
+</body>
+</html>

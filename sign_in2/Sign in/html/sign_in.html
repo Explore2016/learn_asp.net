@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <title>求索签到系统</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/sign_in.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="top">
+            <div id="clock">
+                <h2>本次签到时长</h2>
+                <div class="clock1" id="timer">00:00:00 </div>
+            </div>
+            <span class="redTitle">本周你共签到：</span><div class="clock2" id="hour0">00:00:00 </div>
+        </div>
+        <div id="content">
+            <div id="TableTitle" style="height: 68px;">
+                <p class="p1" id="listBox2">工作室本周签到情况
+                    <input style="margin-left: 100px;" type="button" name="btnLeft" value="上一周" onclick="next(--week)" />
+                    <input type="button" name="btnRight" value="下一周" onclick="next(++week)" />
+                </p>
+                <p class="p2">你本周签到的详细情况<a href="all_detail.html" class="checkAll" target="_blank">查看全部</a></p>
+            </div>
+            <div id="tableContainer">
+                <table id="table_left">
+                    <tr>
+                        <th class="t1">序号</th>
+                        <th class="t2">学号</th>
+                        <th class="t3">姓名</th>
+                        <th class="t4">在线</th>
+                        <th class="t4">周数</th>
+                        <th class="t5">共签到</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>:00</td>
+                    </tr>
+                </table>
+                <table id="table_right">
+                    <tr>
+                        <th class="t3">开始</th>
+                        <th class="t3">结束</th>
+                        <th class="t3">星期</th>
+                        <th class="t3">时间</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+    <script>
+        var week = 0;
+        function next(week)
+        {
+            $.ajax({
+                url: '../handler/info.ashx?info=all&week=' + week,
+                type: 'post',
+                success: function (re) {
+                    table_left.innerHTML = re;
+                }
+            })
+            $.ajax({
+                url: '../handler/info.ashx?info=you&week=' + week,
+                type: 'post',
+                success: function (re) {
+                    table_right.innerHTML = re;
+                }
+            })
+        }
+        next(week);
+    </script>
+    <br />
+    <br />
+    <br />
+</body>
+</html>
